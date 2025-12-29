@@ -34,7 +34,7 @@ interface ButtonAsLink
 	target?: '_blank' | '_self' | '_parent' | '_top';
 }
 
-type ButtonProps = ButtonAsButton | ButtonAsLink;
+type ButtonProps = (ButtonAsButton | ButtonAsLink) & { disabled?: boolean };
 
 const Button = ({
 	children,

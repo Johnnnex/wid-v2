@@ -6,10 +6,12 @@ import { Button } from '../common/Button';
 import Link from 'next/link';
 import { Icon } from '@iconify/react';
 import { cn } from '@/lib/utils';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
 	const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 	const [isScrolled, setIsScrolled] = useState(false);
+	const pathname = usePathname();
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -20,8 +22,21 @@ const Header = () => {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
+	const isActive = (url?: string, dropdown?: { url: string }[]) => {
+		if (url) {
+			return pathname === url;
+		}
+		if (dropdown) {
+			return dropdown.some((item) => pathname.startsWith(item.url));
+		}
+		return false;
+	};
+
 	return (
-		<header className='bg-[#FFFFFF] fixed top-0 w-full px-20 z-50 transition-all duration-300'>
+		<header
+			style={{ boxShadow: '0 2px 6px 0 rgba(10, 116, 239, 0.12)' }}
+			className='bg-[#FFFFFF] fixed top-0 w-full px-20 z-50 transition-all duration-300'
+		>
 			<div
 				className={cn(
 					'flex justify-between max-w-350 mx-auto items-center transition-all duration-300',
@@ -37,7 +52,6 @@ const Header = () => {
 								{ name: 'About Us', url: '/about' },
 								{
 									name: 'Programs',
-									url: '/programs',
 									dropdown: [
 										{ name: 'WID Academy', url: '/programs/academy' },
 										{ name: 'Initiatives', url: '/programs/initiatives' },
@@ -47,7 +61,6 @@ const Header = () => {
 								{ name: 'Partner', url: '/partner' },
 								{
 									name: 'Community',
-									url: '/community',
 									dropdown: [
 										{ name: 'WID Community', url: '/community' },
 										{ name: 'WID Chapters', url: '/community/chapters' },
@@ -62,20 +75,33 @@ const Header = () => {
 									onMouseEnter={() => dropdown && setOpenDropdown(name)}
 									onMouseLeave={() => setOpenDropdown(null)}
 								>
-									<Link
-										className='hover:text-[#0A74EF] transition-colors duration-300 text-[#000000] text-[1rem] flex items-center gap-1'
-										href={url}
-									>
-										{name}
-										{dropdown && (
+									{dropdown ? (
+										<button
+											className={cn(
+												'hover:text-[#0A74EF] transition-colors duration-300 text-[1rem] flex items-center gap-1 cursor-pointer',
+												isActive(undefined, dropdown) ? 'text-[#0A74EF]' : 'text-[#000000]'
+											)}
+											type='button'
+										>
+											{name}
 											<Icon
 												icon='hugeicons:arrow-down-01'
 												className={`transition-transform duration-300 ${
 													openDropdown === name ? 'rotate-180' : ''
 												}`}
 											/>
-										)}
-									</Link>
+										</button>
+									) : (
+										<Link
+											className={cn(
+												'hover:text-[#0A74EF] transition-colors duration-300 text-[1rem] flex items-center gap-1',
+												isActive(url) ? 'text-[#0A74EF]' : 'text-[#000000]'
+											)}
+											href={url}
+										>
+											{name}
+										</Link>
+									)}
 									{dropdown && (
 										<div
 											className={cn(
@@ -89,7 +115,8 @@ const Header = () => {
 														key={idx}
 														href={item.url}
 														className={cn(
-															`block text-[1rem] border-[#0A74EF33] text-center hover:text-[#0A74EF] transition-colors duration-300 text-black`,
+															`block text-[1rem] border-[#0A74EF33] text-center hover:text-[#0A74EF] transition-colors duration-300`,
+															pathname === item.url ? 'text-[#0A74EF]' : 'text-black',
 															idx === 0 ? 'pb-5' : idx === 2 ? 'pt-5' : 'py-5',
 															idx !== 2 && 'border-b'
 														)}

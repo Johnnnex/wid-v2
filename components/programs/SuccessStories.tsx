@@ -1,11 +1,11 @@
 import { Icon } from '@iconify/react';
 
-const SuccessStories = () => {
+const SuccessStories = ({ title = 'Success Stories' }: { title?: string }) => {
 	return (
 		<section className='px-20 bg-[url(/images/dust-bg.png)] bg-blend-overlay bg-[#0A74EF1A] bg-center bg-cover py-20'>
 			<div className='max-w-350 mx-auto'>
 				<h2 className='text-black font-medium text-[2.5rem] tracking-[1.6px] text-center mb-10'>
-					Success Stories
+					{title}
 				</h2>
 				<div className='grid grid-cols-4 gap-5'>
 					{[

@@ -49,7 +49,7 @@ const Mentor = () => {
 							committed to active participation and comfortable with virtual mentorship
 							and communication.
 						</p>
-						<Button className='p-{1.25rem_2.5rem]'>Apply Here</Button>
+						<Button className='p-[1.25rem_2.5rem]'>Apply Here</Button>
 					</div>
 				</div>
 			</section>
