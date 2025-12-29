@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { inter } from '@/app/layout';
 import { Button } from '@/components/common';
+import { PreviousEvents } from '@/components/events';
 import { SuccessStories } from '@/components/programs';
 import { cn } from '@/lib/utils';
 
@@ -56,6 +57,8 @@ const Events = () => {
 					</p>
 				</div>
 			</section>
+
+			<PreviousEvents />
 
 			<SuccessStories title='Community Stories' />
 		</>
