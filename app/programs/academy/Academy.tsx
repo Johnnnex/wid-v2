@@ -1,4 +1,5 @@
-import { HeroV2 } from '@/components/common';
+import { CTA, HeroV2 } from '@/components/common';
+import { ProgramsGrid, SuccessStories } from '@/components/programs';
 
 const Academy = () => {
 	return (
@@ -18,20 +19,17 @@ const Academy = () => {
 				</p>
 			</HeroV2>
 
-			<section className='px-20 bg-[url(/images/dust-bg.png)] bg-center bg-cover py-20'>
-				<div className='max-w-350 mx-auto'>
-					<div className='flex gap-8 p-5'>
-						{['WID Foundational Trainings', 'Skill-up Training']?.map(
-							(item, index) => (
-								<button
-									key={`__button__${index}`}
-									className=''
-								></button>
-							)
-						)}
-					</div>
-				</div>
-			</section>
+			<ProgramsGrid />
+
+			<SuccessStories />
+
+			<CTA
+				title='Recruit Top Web3 Professionals'
+				content={`Connect with and recruit top-tier Web3 professionals whose technical skill and proficiency are matched by unwavering integrity and ethical standards.`}
+				cta={{
+					text: 'Hire Our Talent',
+				}}
+			/>
 		</>
 	);
 };

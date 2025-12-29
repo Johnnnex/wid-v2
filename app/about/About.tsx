@@ -1,5 +1,3 @@
-'use client';
-
 /* eslint-disable @next/next/no-img-element */
 import {
 	AboutOverview,
@@ -152,7 +150,6 @@ const About = () => {
 				title='Recruit Top Web3 Professionals'
 				content={`Connect with and recruit top-tier Web3 professionals whose technical skill and proficiency are matched by unwavering integrity and ethical standards.`}
 				cta={{
-					onClick: () => {},
 					text: 'Hire Our Talent',
 				}}
 			/>

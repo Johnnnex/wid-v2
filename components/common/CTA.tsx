@@ -7,7 +7,12 @@ const CTA = ({
 }: {
 	title: string;
 	content: string;
-	cta: { text: string; onClick: () => void };
+	cta?: {
+		text: string;
+		url?: string;
+		target?: '_blank' | '_self' | '_parent' | '_top' | undefined;
+		onClick?: () => void;
+	};
 }) => {
 	return (
 		<section className='px-10 bg-[url(/images/texture-bg-full.png)] bg-blend-overlay bg-center bg-cover bg-[#0A74EF] py-10'>
@@ -19,6 +24,8 @@ const CTA = ({
 					{content}
 				</p>
 				<Button
+					url={cta?.url || (undefined as unknown as string)}
+					target={cta?.target}
 					onClick={cta?.onClick}
 					theme='secondary'
 					className='mx-auto p-[1.25rem_2.5rem] w-fit block'
