@@ -1,0 +1,163 @@
+'use client';
+
+/* eslint-disable @next/next/no-img-element */
+import {
+	AboutOverview,
+	DonationCTA,
+	ImpactStats,
+	PartnershipCTA,
+} from '@/components/about';
+import { Button, CTA, HeroV2 } from '@/components/common';
+import { PartnerLogoStrip } from '@/components/partners';
+import { TestimonialCarousel } from '@/components/testimonials';
+import { inter } from '../layout';
+
+const About = () => {
+	return (
+		<>
+			<HeroV2 bgUrl='about-hero-img.png'>
+				<h1 className='text-white text-[2.5rem] font-semibold w-301 mx-auto text-center'>
+					Building Women Who Build the Future
+				</h1>
+			</HeroV2>
+
+			<AboutOverview />
+
+			<section className='px-20 bg-[url(/images/texture-bg-full.png)] bg-blend-overlay bg-center bg-cover bg-[#0A74EF] py-14.5'>
+				<div className='max-w-350 items-center mx-auto gap-27.75 flex'>
+					<h4 className='text-white text-[2.25rem] font-semibold w-33.25'>
+						Core Values
+					</h4>
+					<div className='w-0.5 h-48.25 bg-white' />
+					<div className='flex flex-1 justify-between'>
+						{['Integrity', 'Advocacy', 'Sustainability', 'Community']?.map(
+							(item, index) => (
+								<Button
+									theme='secondary'
+									className='p-[1.25rem_2.5rem]'
+									key={`__button__${index}`}
+								>
+									{item}
+								</Button>
+							)
+						)}
+					</div>
+				</div>
+			</section>
+
+			<section className='px-20 bg-[url(/images/dust-bg.png)] bg-center bg-cover py-20'>
+				<div className='max-w-350 mx-auto'>
+					<h2 className='text-black font-medium text-[2.5rem] text-center mb-10'>
+						Making a Difference: Our Approach
+					</h2>
+					<div className='grid grid-cols-2 gap-[2.5rem_3.75rem]'>
+						{[
+							{
+								title: 'Education',
+								content: `Embark on your Web3 journey by joining our academy programs, including Web3 training, Skill Up Program, and other technical training under the guidance of seasoned mentors to take you to expert level.`,
+								url: '',
+							},
+							{
+								title: 'Community & Chapters',
+								content: `Join our community and engage with over 6000+ fellow African women in the Web3 space, hailing from various corners of the continent.`,
+								url: '',
+							},
+							{
+								title: 'Events',
+								content: `Join us for a range of events, both online and in-person, which may include the WID Summit, Twitter spaces, webinars, etc.`,
+								url: '',
+							},
+							{
+								title: 'Initiatives',
+								content: `As a non-profit organization within the Web3 ecosystem, we understand the unique challenges and barriers that come with starting or advancing a career and we try to provide support the best way we can.`,
+								url: '',
+							},
+						]?.map((item, index) => (
+							<div
+								key={`__item__${index}__`}
+								className='border rounded-[1.25rem] overflow-hidden flex flex-col border-[#0A74EF33] aspect-[1.39]'
+							>
+								<figure
+									style={{ backgroundImage: `url(/images/about-img-${index + 2}.png)` }}
+									className='flex-1 bg-cover'
+								/>
+								<div className='p-[2.5rem_1.25rem] min-h-52.5 justify-center flex-col flex gap-1'>
+									<h4 className='text-black font-medium text-[1.25rem]'>
+										{item?.title}
+									</h4>
+									<p
+										className={`leading-8 font-light text-[1rem] ${inter?.className} text-justify`}
+									>
+										{item?.content}{' '}
+										<a
+											href={item?.url}
+											target='_blank'
+											className='text-[#0A74EF] hover:underline'
+										>
+											Learn More
+										</a>
+									</p>
+								</div>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+
+			<ImpactStats />
+
+			<PartnershipCTA />
+
+			<PartnerLogoStrip />
+
+			<DonationCTA />
+
+			<TestimonialCarousel />
+
+			<section className='px-20 bg-[url(/images/dust-bg.png)] bg-center bg-cover py-20'>
+				<div className='max-w-350 mx-auto'>
+					<h2 className='text-black font-medium text-[2.5rem] text-center mb-5'>
+						Visual Chronicles
+					</h2>
+					<p
+						className={`text-black leading-8 text-[1rem] text-center font-normal ${inter?.className} mb-10`}
+					>
+						Relive the spectacular moments and amazing memories from our events.
+					</p>
+					<div className='grid grid-cols-3 mb-10 gap-10'>
+						{Array.from({ length: 6 }, (_, index) => (
+							<img
+								key={`__image__${index}__`}
+								alt={`About Image ${index + 8}`}
+								src={`/images/about-img-${index + 8}.png`}
+								className='rounded-[1.25rem] overflow-hidden'
+							/>
+						))}
+					</div>
+					<Button
+						icon={{
+							url: 'hugeicons:arrow-right-01',
+							width: '2rem',
+							height: '2rem',
+						}}
+						className='p-[1.25rem_2.5rem] mx-auto'
+						variant='outlined'
+					>
+						View More
+					</Button>
+				</div>
+			</section>
+
+			<CTA
+				title='Recruit Top Web3 Professionals'
+				content={`Connect with and recruit top-tier Web3 professionals whose technical skill and proficiency are matched by unwavering integrity and ethical standards.`}
+				cta={{
+					onClick: () => {},
+					text: 'Hire Our Talent',
+				}}
+			/>
+		</>
+	);
+};
+
+export default About;
