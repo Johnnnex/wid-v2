@@ -9,6 +9,7 @@ import { Button, CTA, HeroV2 } from '@/components/common';
 import { PartnerLogoStrip } from '@/components/partners';
 import { TestimonialCarousel } from '@/components/testimonials';
 import { inter } from '../layout';
+import Link from 'next/link';
 
 const About = () => {
 	return (
@@ -53,22 +54,22 @@ const About = () => {
 							{
 								title: 'Education',
 								content: `Embark on your Web3 journey by joining our academy programs, including Web3 training, Skill Up Program, and other technical training under the guidance of seasoned mentors to take you to expert level.`,
-								url: '',
+								url: '/programs/academy',
 							},
 							{
 								title: 'Community & Chapters',
 								content: `Join our community and engage with over 6000+ fellow African women in the Web3 space, hailing from various corners of the continent.`,
-								url: '',
+								url: '/community',
 							},
 							{
 								title: 'Events',
 								content: `Join us for a range of events, both online and in-person, which may include the WID Summit, Twitter spaces, webinars, etc.`,
-								url: '',
+								url: '/community/events',
 							},
 							{
 								title: 'Initiatives',
 								content: `As a non-profit organization within the Web3 ecosystem, we understand the unique challenges and barriers that come with starting or advancing a career and we try to provide support the best way we can.`,
-								url: '',
+								url: '/programs/initiatives',
 							},
 						]?.map((item, index) => (
 							<div
@@ -87,13 +88,12 @@ const About = () => {
 										className={`leading-8 font-light text-[1rem] ${inter?.className} text-justify`}
 									>
 										{item?.content}{' '}
-										<a
+										<Link
 											href={item?.url}
-											target='_blank'
 											className='text-[#0A74EF] hover:underline'
 										>
 											Learn More
-										</a>
+										</Link>
 									</p>
 								</div>
 							</div>
@@ -138,7 +138,8 @@ const About = () => {
 							width: '2rem',
 							height: '2rem',
 						}}
-						className='p-[1.25rem_2.5rem] mx-auto'
+						url='https://drive.google.com/drive/folders/1oglXz-N4YJRUwSpGSwvTF2HfZ80SaV0i'
+						className='p-[1.25rem_2.5rem] mx-auto w-fit'
 						variant='outlined'
 					>
 						View More
@@ -151,6 +152,8 @@ const About = () => {
 				content={`Connect with and recruit top-tier Web3 professionals whose technical skill and proficiency are matched by unwavering integrity and ethical standards.`}
 				cta={{
 					text: 'Hire Our Talent',
+					target: '_self',
+					url: '/hire-talent',
 				}}
 			/>
 		</>

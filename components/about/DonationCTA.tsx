@@ -23,7 +23,13 @@ const DonationCTA = () => {
 							initiatives and facilitating our events and programs across several
 							chapters across Africa.
 						</p>
-						<Button className='p-[1.25rem_2.5rem]'>Donate Now</Button>
+						<Button
+							url='/donate'
+							target='_self'
+							className='p-[1.25rem_2.5rem] w-fit'
+						>
+							Donate Now
+						</Button>
 					</div>
 				</div>
 			</div>

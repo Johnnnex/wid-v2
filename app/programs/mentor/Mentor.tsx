@@ -49,7 +49,12 @@ const Mentor = () => {
 							committed to active participation and comfortable with virtual mentorship
 							and communication.
 						</p>
-						<Button className='p-[1.25rem_2.5rem]'>Apply Here</Button>
+						<Button
+							url='https://forms.gle/EAa441K38eoMcVtQ8'
+							className='p-[1.25rem_2.5rem] w-fit'
+						>
+							Apply Here
+						</Button>
 					</div>
 				</div>
 			</section>
@@ -61,6 +66,8 @@ const Mentor = () => {
 				content={`Connect with and recruit top-tier Web3 professionals whose technical skill and proficiency are matched by unwavering integrity and ethical standards.`}
 				cta={{
 					text: 'Hire Our Talent',
+					target: '_self',
+					url: '/hire-talent',
 				}}
 			/>
 		</>

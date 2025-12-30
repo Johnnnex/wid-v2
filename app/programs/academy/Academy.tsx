@@ -28,6 +28,8 @@ const Academy = () => {
 				content={`Connect with and recruit top-tier Web3 professionals whose technical skill and proficiency are matched by unwavering integrity and ethical standards.`}
 				cta={{
 					text: 'Hire Our Talent',
+					target: '_self',
+					url: '/hire-talent',
 				}}
 			/>
 		</>

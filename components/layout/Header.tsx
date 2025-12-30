@@ -131,7 +131,9 @@ const Header = () => {
 							))}
 						</ul>
 					</nav>
-					<Button>Join the Movement</Button>
+					<Button url='https://forms.gle/sVHUHnF9bz42BJui7'>
+						Join the Movement
+					</Button>
 				</div>
 			</div>
 		</header>

@@ -40,7 +40,12 @@ const Partner = () => {
 							digital future. Let&apos;s work together to build a stronger, more
 							equitable decentralized finance ecosystem.
 						</p>
-						<Button className='p-[1.25rem_2.5rem]'>Explore Partnership</Button>
+						<Button
+							url='mailto:partnership@womenindefi.org?subject=Partnership Request With WiD'
+							className='p-[1.25rem_2.5rem] w-fit'
+						>
+							Explore Partnership
+						</Button>
 					</div>
 				</div>
 			</section>
@@ -65,7 +70,7 @@ const Partner = () => {
 									</p>
 								),
 								cta: {
-									url: 'mailto:partnership@womenindefi.org',
+									url: 'mailto:partnership@womenindefi.org?subject=Request For Sponsorship Details',
 									text: 'Explore Sponsorship',
 								},
 							},

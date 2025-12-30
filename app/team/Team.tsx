@@ -149,6 +149,7 @@ const Team = () => {
 					builders, unlock exclusive resources, and collaboratively shape a more
 					equitable industry future.`}
 				cta={{
+					url: 'https://forms.gle/sVHUHnF9bz42BJui7',
 					text: 'Join the Sisterhood',
 				}}
 			/>

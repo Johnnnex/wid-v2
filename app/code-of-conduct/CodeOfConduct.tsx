@@ -5,7 +5,7 @@ import { inter } from '../layout';
 const CodeOfConduct = () => {
 	return (
 		<>
-			<HeroV2 bgUrl='coc-hero-img.png'>
+			<HeroV2 bgUrl='about-hero-img.png'>
 				<h1 className='text-[2.5rem] font-medium text-white'>
 					The WID Community&apos;s Code of Conduct
 				</h1>

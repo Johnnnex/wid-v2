@@ -7,6 +7,8 @@ import {
 } from '@/components/about';
 import { PartnerLogoStrip } from '@/components/partners';
 import { TestimonialCarousel } from '@/components/testimonials';
+import { inter } from './layout';
+import { cn } from '@/lib/utils';
 
 export default function Home() {
 	return (
@@ -17,8 +19,15 @@ export default function Home() {
 						Empowering Women, Decentralizing the Future
 					</h1>
 					<div className='flex items-center gap-20'>
-						<Button className='w-58.25 p-[1.25rem_2.5rem]'>Join the Movement</Button>
 						<Button
+							className='w-58.25 p-[1.25rem_2.5rem]'
+							url='https://forms.gle/sVHUHnF9bz42BJui7'
+						>
+							Join the Movement
+						</Button>
+						<Button
+							url='/donate'
+							target='_self'
 							variant='outlined'
 							className='w-58.25'
 						>
@@ -48,6 +57,7 @@ export default function Home() {
 					equitable industry future.`}
 				cta={{
 					text: 'Join the Sisterhood',
+					url: 'https://forms.gle/sVHUHnF9bz42BJui7',
 				}}
 			/>
 
@@ -58,11 +68,11 @@ export default function Home() {
 					</h2>
 					<div className='flex border rounded-[1.25rem] overflow-hidden border-[#0A74EF80]'>
 						<div className='flex-1 flex flex-col gap-2 p-[2.5rem_.75rem_2.5rem_2.5rem] border-r border-[#0A74EF80]'>
-							<h6>
+							<h6 className='font-medium text-[1.25rem]'>
 								Women in DeFi Marks Three Years of Impact, Education, & Financial
 								Inclusion for African Women
 							</h6>
-							<p>
+							<p className={cn(inter?.className, 'text-[1rem] font-normal')}>
 								Women in DeFi, a transformative community founded by Sarah Idahosa, is
 								celebrating its third anniversary this month, marking a significant
 								milestone in the organization&apos;s mission to empower women...

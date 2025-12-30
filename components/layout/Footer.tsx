@@ -3,10 +3,74 @@
 import { useState } from 'react';
 import { Icon } from '@iconify/react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { SVGClient } from '../common';
 
 const Footer = () => {
 	const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+	const pathname = usePathname();
+
+	const isActiveLink = (url: string) => {
+		if (!url) return false;
+		return pathname === url || pathname.startsWith(url + '/');
+	};
+
+	const isAbsoluteUrl = (url: string) => {
+		return url.startsWith('http://') || url.startsWith('https://');
+	};
+
+	const renderLink = (
+		link:
+			| {
+					label: string;
+					url: string;
+					hasDropdown?: undefined;
+					dropdownItems?: undefined;
+			  }
+			| {
+					label: string;
+					hasDropdown: boolean;
+					dropdownItems: {
+						label: string;
+						url: string;
+					}[];
+					url?: undefined;
+			  }
+	) => {
+		if (!link.url) {
+			return (
+				<span className='text-gray-400 cursor-not-allowed'>{link.label}</span>
+			);
+		}
+
+		const isActive = isActiveLink(link.url);
+		const baseClasses = 'transition-colors block';
+		const activeClasses = isActive
+			? 'text-blue-600 font-medium'
+			: 'text-black hover:text-blue-600';
+
+		if (isAbsoluteUrl(link.url)) {
+			return (
+				<a
+					href={link.url}
+					target='_blank'
+					rel='noopener noreferrer'
+					className={`${baseClasses} ${activeClasses}`}
+				>
+					{link.label}
+				</a>
+			);
+		}
+
+		return (
+			<Link
+				href={link.url}
+				className={`${baseClasses} ${activeClasses}`}
+			>
+				{link.label}
+			</Link>
+		);
+	};
 
 	return (
 		<footer className='px-20 bg-[url(/images/texture-bg-full.png)] bg-[#0A74EF33] bg-blend-overlay bg-center bg-cover pt-30'>
@@ -17,9 +81,9 @@ const Footer = () => {
 						{
 							title: 'Get Involved',
 							links: [
-								{ label: 'Partner with us', url: '' },
-								{ label: 'Make a donation', url: '' },
-								{ label: 'WID Summit', url: '' },
+								{ label: 'Partner with us', url: '/partner' },
+								{ label: 'Make a donation', url: '/donate' },
+								{ label: 'WID Summit', url: '/' },
 								{
 									label: 'Annual Reports',
 									hasDropdown: true,
@@ -35,19 +99,22 @@ const Footer = () => {
 						{
 							title: 'About Us',
 							links: [
-								{ label: 'About Us', url: '' },
-								{ label: 'Code of Conduct', url: '' },
-								{ label: 'Our Programs', url: '' },
-								{ label: 'Meet the Team', url: '' },
+								{ label: 'About Us', url: '/about' },
+								{ label: 'Code of Conduct', url: '/code-of-conduct' },
+								{ label: 'Our Programs', url: '/programs/academy' },
+								{ label: 'Meet the Team', url: '/team' },
 							],
 						},
 						{
 							title: 'Community',
 							links: [
-								{ label: 'Discord Community', url: '' },
-								{ label: 'WID Chapters', url: '' },
-								{ label: 'Upcoming Events', url: '' },
-								{ label: 'Blog', url: '' },
+								{
+									label: 'Discord Community',
+									url: 'https://forms.gle/sVHUHnF9bz42BJui7',
+								},
+								{ label: 'WID Chapters', url: '/community/chapters' },
+								{ label: 'Upcoming Events', url: '/community/events' },
+								{ label: 'Blog', url: 'https://medium.com/women-in-defi' },
 							],
 						},
 					].map((section, sectionIndex) => (
@@ -59,54 +126,50 @@ const Footer = () => {
 								{section.links.map((link, linkIndex) => (
 									<div key={linkIndex}>
 										{link.hasDropdown ? (
-											<button
-												onClick={() => {
-													const dropdownId = `${sectionIndex}-${linkIndex}`;
-													setOpenDropdown(openDropdown === dropdownId ? null : dropdownId);
-												}}
-												className='flex items-center gap-2 text-black hover:text-blue-600 transition-colors text-left'
-											>
-												{link.label}
-												<Icon
-													icon='hugeicons:arrow-down-01'
-													className={`transition-transform duration-300 ${
-														openDropdown === `${sectionIndex}-${linkIndex}`
-															? 'rotate-180'
-															: ''
-													}`}
-												/>
-											</button>
+											<>
+												<button
+													onClick={() => {
+														const dropdownId = `${sectionIndex}-${linkIndex}`;
+														setOpenDropdown(openDropdown === dropdownId ? null : dropdownId);
+													}}
+													className='flex items-center gap-2 text-black hover:text-blue-600 transition-colors text-left'
+												>
+													{link.label}
+													<Icon
+														icon='hugeicons:arrow-down-01'
+														className={`transition-transform duration-300 ${
+															openDropdown === `${sectionIndex}-${linkIndex}`
+																? 'rotate-180'
+																: ''
+														}`}
+													/>
+												</button>
+												{link.dropdownItems && (
+													<div
+														className={`overflow-hidden transition-all duration-300 ease-in-out ${
+															openDropdown === `${sectionIndex}-${linkIndex}`
+																? 'max-h-40 opacity-100 mt-2'
+																: 'max-h-0 opacity-0'
+														}`}
+													>
+														<div className='pl-4 flex flex-col gap-2'>
+															{link.dropdownItems.map((item, itemIndex) => (
+																<a
+																	key={itemIndex}
+																	href={item.url}
+																	target='_blank'
+																	rel='noopener noreferrer'
+																	className='text-black hover:text-blue-600 transition-colors text-sm'
+																>
+																	{item.label}
+																</a>
+															))}
+														</div>
+													</div>
+												)}
+											</>
 										) : (
-											<Link
-												href={link.url!}
-												className='text-black hover:text-blue-600 transition-colors'
-											>
-												{link.label}
-											</Link>
-										)}
-
-										{link.hasDropdown && link.dropdownItems && (
-											<div
-												className={`overflow-hidden transition-all duration-300 ease-in-out ${
-													openDropdown === `${sectionIndex}-${linkIndex}`
-														? 'max-h-40 opacity-100 mt-2'
-														: 'max-h-0 opacity-0'
-												}`}
-											>
-												<div className='pl-4 flex flex-col gap-2'>
-													{link.dropdownItems.map((item, itemIndex) => (
-														<a
-															key={itemIndex}
-															href={item.url}
-															target='_blank'
-															rel='noopener noreferrer'
-															className='text-black hover:text-blue-600 transition-colors text-sm'
-														>
-															{item.label}
-														</a>
-													))}
-												</div>
-											</div>
+											renderLink(link)
 										)}
 									</div>
 								))}
@@ -126,18 +189,31 @@ const Footer = () => {
 					</span>
 					<div className='absolute bottom-0 flex gap-6 items-center right-0'>
 						{[
-							{ url: '', icon: 'hugeicons:new-twitter-rectangle' },
-							{ url: '', icon: 'hugeicons:instagram' },
-							{ url: '', icon: 'hugeicons:linkedin-01' },
-							{ url: '', icon: 'hugeicons:youtube' },
-							{ url: '', icon: 'hugeicons:facebook-01' },
-							{ url: '', icon: 'hugeicons:mail-01' },
+							{
+								url: 'https://twitter.com/womenindefi_org',
+								icon: 'hugeicons:new-twitter-rectangle',
+							},
+							{
+								url: 'https://www.instagram.com/womenindefi_org/',
+								icon: 'hugeicons:instagram',
+							},
+							{
+								url: 'https://www.linkedin.com/company/womenindefi/',
+								icon: 'hugeicons:linkedin-01',
+							},
+							{ url: 'https://youtube.com/@womenindefi', icon: 'hugeicons:youtube' },
+							{
+								url: 'https://www.facebook.com/womenindefi',
+								icon: 'hugeicons:facebook-01',
+							},
+							{ url: 'mailto:contact@womenindefi.org', icon: 'hugeicons:mail-01' },
 						]?.map((socials, index) => (
 							<a
 								key={`__social__link__${index}`}
 								href={socials?.url}
 								target='_blank'
 								rel='noopener noreferrer'
+								className='hover:opacity-70 transition-opacity'
 							>
 								<Icon
 									icon={socials?.icon}

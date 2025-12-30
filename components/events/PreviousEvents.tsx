@@ -81,6 +81,8 @@ const PreviousEvents = () => {
 				<div className='flex justify-center mt-10 w-full'>
 					<Button
 						variant='outlined'
+						url='https://drive.google.com/drive/folders/1oglXz-N4YJRUwSpGSwvTF2HfZ80SaV0i'
+						className='w-fit'
 						icon={{
 							url: 'hugeicons:arrow-right-01',
 							width: '2rem',

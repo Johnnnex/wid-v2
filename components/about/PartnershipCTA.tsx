@@ -20,7 +20,13 @@ const PartnershipCTA = () => {
 							organizations that share our belief in women&apos;s potential in
 							Blockchain and DeFi.
 						</p>
-						<Button className='p-[1.25rem_2.5rem]'>Partner with Us</Button>
+						<Button
+							url='/partner'
+							target='_self'
+							className='p-[1.25rem_2.5rem] w-fit'
+						>
+							Partner with Us
+						</Button>
 					</div>
 					<img
 						alt='About Image 6'

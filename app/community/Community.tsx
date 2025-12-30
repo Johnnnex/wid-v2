@@ -53,7 +53,10 @@ const Community = () => {
 								walk her Web3 journey alone. We learn together, build together, and rise
 								together.
 							</p>
-							<Button className='p-[1.25rem_2.5rem] mx-auto'>
+							<Button
+								url='https://forms.gle/sVHUHnF9bz42BJui7'
+								className='p-[1.25rem_2.5rem] mx-auto w-fit'
+							>
 								Join the Sisterhood
 							</Button>
 						</div>
