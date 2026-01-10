@@ -91,23 +91,23 @@ const HireTalent = () => {
 
 	return (
 		<>
-			<section className='pt-39 bg-white'>
-				<section className='px-20 bg-[url(/images/texture-bg-fullx2.png)] bg-center bg-cover py-30'>
+			<section className='pt-8 md:pt-20 lg:pt-39 bg-white'>
+				<section className='px-6 lg:px-20 bg-[url(/images/texture-bg-fullx2.png)] bg-center bg-cover py-8 md:py-20 lg:py-30'>
 					<div className='max-w-350 mx-auto'>
-						<h1 className='text-[2.5rem] font-semibold text-center mb-3'>
+						<h1 className='text-[1.5rem] md:text-[2.5rem] font-semibold text-center mb-2 md:mb-3'>
 							Hire Our Talent
 						</h1>
 						<p
 							className={cn(
 								inter?.className,
-								'text-black text-center mb-16 font-normal text-[1rem]'
+								'text-black text-[0.75rem] md:text-[1rem] text-center mb-8 md:mb-16 font-normal'
 							)}
 						>
 							Ready to hire? Accurately fill out the forms below to secure talent from
 							our program.
 						</p>
 						<form onSubmit={handleSubmit(onSubmit)}>
-							<div className='grid grid-cols-2 gap-[3.75rem_7.5rem]'>
+							<div className='grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-[3.75rem_7.5rem]'>
 								{formFields.map((field) => (
 									<Controller
 										key={field.name}
@@ -130,8 +130,10 @@ const HireTalent = () => {
 									/>
 								))}
 							</div>
-							<div className='flex justify-center mt-15'>
-								<Button className='p-[1.25rem_2.5rem]'>Submit Form</Button>
+							<div className='flex justify-center mt-8 md:mt-15'>
+								<Button className='p-[.75rem_1.5rem] md:p-[1.25rem_2.5rem]'>
+									Submit Form
+								</Button>
 							</div>
 						</form>
 					</div>

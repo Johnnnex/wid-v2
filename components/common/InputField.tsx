@@ -129,7 +129,7 @@ const CustomOption: FC<OptionProps<unknown, boolean, GroupBase<any>>> = (
 					isSelected && 'bg-[#F9FAFB]'
 				} transition-all duration-[.4s] hover:bg-[#F9FAFB] ${
 					isLastOption ? '' : 'mb-1'
-				} text-[1rem] font-normal leading-6`}
+				} text-[.75rem] md:text-[1rem] font-normal leading-6`}
 			>
 				{label}
 				{isSelected && (
@@ -149,13 +149,13 @@ const CustomControl: FC<ControlProps<unknown, boolean, GroupBase<unknown>>> = ({
 }) => (
 	<components.Control {...props}>
 		<div
+			className='md:text-[1rem] text-[.75rem]'
 			style={{
 				padding: '0px 0.1875rem 0px 0.875rem',
 				alignItems: 'center',
 				margin: 0,
 				width: '100%',
 				height: '100%',
-				fontSize: '1rem',
 				display: 'flex',
 			}}
 		>
@@ -264,7 +264,10 @@ const InputField = memo(
 						{label && (
 							<label
 								htmlFor={name}
-								className={cn(inter?.className, 'text-[1rem] font-normal text-black')}
+								className={cn(
+									inter?.className,
+									'text-[.75rem] md:text-[1rem] font-normal text-black'
+								)}
 							>
 								{label}
 							</label>
@@ -284,7 +287,7 @@ const InputField = memo(
 										!!error
 											? 'border-[#FDA29B] text-[#F04438]'
 											: 'border-[#0A74EF80] text-black'
-									} h-25 w-full rounded-lg bg-transparent p-[0.625rem_0.875rem] text-[1rem] font-normal leading-6 placeholder:font-light placeholder:opacity-[.7]`}
+									} h-25 w-full rounded-lg bg-transparent p-[0.625rem_0.875rem] text-[.75rem] md:text-[1rem] font-normal leading-6 placeholder:font-light placeholder:opacity-[.7]`}
 									{...rest}
 								/>
 							) : type === 'select' || type === 'multi-select' ? (
@@ -611,7 +614,7 @@ const InputField = memo(
 										onBlur={telInputBlur}
 										onChange={telInputChange && telInputChange}
 										value={telInputValue}
-										className={`h-full w-[80%] rounded-r-lg bg-transparent p-[0.625rem_0.875rem_0.625rem_0] text-[1rem] font-normal leading-6 placeholder:font-light placeholder:opacity-[.7]`}
+										className={`h-full w-[80%] rounded-r-lg bg-transparent p-[0.625rem_0.875rem_0.625rem_0] text-[.75rem] md:text-[1rem] font-normal leading-6 placeholder:font-light placeholder:opacity-[.7]`}
 										{...otherTelInputProps}
 									/>
 								</div>
@@ -630,7 +633,7 @@ const InputField = memo(
 										!!error
 											? 'border-[#FDA29B] text-[#F04438]'
 											: 'border-[#0A74EF80] text-black'
-									} h-11 w-full rounded-lg bg-transparent p-[0.625rem_0.875rem] text-[1rem] font-normal leading-6 placeholder:font-light placeholder:opacity-[.7]`}
+									} h-11 w-full rounded-lg bg-transparent p-[0.625rem_0.875rem] text-[.75rem] md:text-[1rem] font-normal leading-6 placeholder:font-light placeholder:opacity-[.7]`}
 									{...rest}
 								/>
 							)}

@@ -5,19 +5,19 @@ import { SuccessStories } from '@/components/programs';
 const Community = () => {
 	return (
 		<>
-			<section className='pt-39 bg-white'>
-				<section className='px-20 bg-[url(/images/texture-bg-fullx2.png)] bg-center bg-cover py-30'>
+			<section className='pt-20 lg:pt-39 bg-white'>
+				<section className='px-6 lg:px-20 bg-[url(/images/texture-bg-fullx2.png)] bg-center bg-cover py-8 md:py-20 lg:py-30'>
 					<div className='max-w-350 mx-auto'>
-						<h1 className='text-[2.5rem] font-semibold text-center mb-3'>
+						<h1 className='text-[1.5rem] md:text-[2.5rem] font-semibold text-center mb-2 md:mb-3'>
 							The Web3 Baddies are building. Ready to join the squad?
 						</h1>
-						<p className='text-[1rem] font-semibold text-center mb-10'>
+						<p className='text-[0.875rem] md:text-[1rem] font-semibold text-center mb-6 md:mb-10'>
 							The most ambitious women in decentralized finance aren&apos;t just
 							watching the future; they&apos;re coding it, investing in it, and leading
 							it.
 						</p>
 						<img
-							className='w-fit max-w-286.25 mx-auto'
+							className='w-full max-w-full md:max-w-286.25 mx-auto'
 							style={{
 								maskImage: 'linear-gradient(to bottom, black 90%, transparent 100%)',
 								WebkitMaskImage:
@@ -26,8 +26,8 @@ const Community = () => {
 							src={'/images/community-hero-img.png'}
 							alt='Community Hero'
 						/>
-						<div className='p-2.5 mt-10'>
-							<p className='font-normal text-center text-[1rem] mb-10 leading-8'>
+						<div className='p-2 md:p-2.5 mt-6 md:mt-10'>
+							<p className='font-normal text-center text-[0.75rem] md:text-[1rem] mb-6 md:mb-10 leading-5 md:leading-8'>
 								The WID Community is a home for women who are curious and ready to grow
 								in the Web3 ecosystem. It&apos;s a space built on learning, connection,
 								and genuine support where members don&apos;t just join a server; they
@@ -55,7 +55,7 @@ const Community = () => {
 							</p>
 							<Button
 								url='https://forms.gle/sVHUHnF9bz42BJui7'
-								className='p-[1.25rem_2.5rem] mx-auto w-fit'
+								className='p-[.75rem_1.5rem] md:p-[1.25rem_2.5rem] mx-auto w-fit'
 							>
 								Join the Sisterhood
 							</Button>

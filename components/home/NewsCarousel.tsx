@@ -38,6 +38,12 @@ const newsData = [
 		url: 'https://www.hernetwork.co/from-knowledge-to-action-sarah-idahosas-commitment-to-women-in-defi/',
 		logoSrc: '/images/hernetwork.webp',
 	},
+	{
+		title: `Women in DeFi Summit 2025: Africa's Boldest Web3 Women Take the Stage in Lagos, Nigeria`,
+		excerpt: `The future of Africa's blockchain landscape is undeniably female, and the upcoming Women in DeFi Summit 2025 is set to be a defining moment. Scheduled to take place on Saturday, April 26, at Eden Hall in Lekki, Lagos, this one-day summit is designed to bring together an inspiring mix of African women who are building, innovating, and reshaping the Web3 space...`,
+		url: 'https://techpoint.africa/brandpress/women-in-defi-summit-2025-africas-boldest-web3-women-take-the-stage-in-lagos-nigeria/',
+		logoSrc: '/svg/techpoint.svg',
+	},
 ];
 
 const NewsCarousel = () => {

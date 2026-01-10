@@ -15,25 +15,25 @@ const About = () => {
 	return (
 		<>
 			<HeroV2 bgUrl='about-hero-img.png'>
-				<h1 className='text-white text-[2.5rem] font-semibold w-301 mx-auto text-center'>
+				<h1 className='text-white text-[1.5rem] md:text-[2.5rem] font-semibold w-full lg:w-301 mx-auto text-center'>
 					Building Women Who Build the Future
 				</h1>
 			</HeroV2>
 
 			<AboutOverview />
 
-			<section className='px-20 bg-[url(/images/texture-bg-full.png)] bg-blend-overlay bg-center bg-cover bg-[#0A74EF] py-14.5'>
-				<div className='max-w-350 items-center mx-auto gap-27.75 flex'>
-					<h4 className='text-white text-[2.25rem] font-semibold w-33.25'>
+			<section className='px-6 lg:px-20 bg-[url(/images/texture-bg-full.png)] bg-blend-overlay bg-center bg-cover bg-[#0A74EF] py-6 md:py-10 lg:py-14.5'>
+				<div className='max-w-350 items-center mx-auto gap-5 md:gap-6 lg:gap-27.75 flex flex-col lg:flex-row'>
+					<h4 className='text-white text-[1.25rem] md:text-[2.25rem] font-semibold lg:w-33.25 text-center lg:text-left'>
 						Core Values
 					</h4>
-					<div className='w-0.5 h-48.25 bg-white' />
-					<div className='flex flex-1 justify-between'>
+					<div className='w-45 lg:w-0.5 h-[0.6px] md:h-px lg:h-48.25 bg-white' />
+					<div className='flex flex-wrap lg:flex-nowrap flex-1 justify-center lg:justify-between items-center gap-3 md:gap-4 lg:gap-6'>
 						{['Integrity', 'Advocacy', 'Sustainability', 'Community']?.map(
 							(item, index) => (
 								<Button
 									theme='secondary'
-									className='p-[1.25rem_2.5rem]'
+									className='p-[.75rem_1.5rem] md:p-[1rem_2rem] lg:p-[1.25rem_2.5rem] text-[0.875rem] md:text-[1rem]'
 									key={`__button__${index}`}
 								>
 									{item}
@@ -44,12 +44,12 @@ const About = () => {
 				</div>
 			</section>
 
-			<section className='px-20 bg-[url(/images/dust-bg.png)] bg-center bg-cover py-20'>
+			<section className='px-6 lg:px-20 bg-[url(/images/dust-bg.png)] bg-center bg-cover py-8 md:py-20'>
 				<div className='max-w-350 mx-auto'>
-					<h2 className='text-black font-medium text-[2.5rem] text-center mb-10'>
+					<h2 className='text-black font-semibold md:font-medium text-[1.25rem] md:text-[2.5rem] text-center mb-6 md:mb-10'>
 						Making a Difference: Our Approach
 					</h2>
-					<div className='grid grid-cols-2 gap-[2.5rem_3.75rem]'>
+					<div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-[2.5rem_3.75rem]'>
 						{[
 							{
 								title: 'Education',
@@ -74,18 +74,18 @@ const About = () => {
 						]?.map((item, index) => (
 							<div
 								key={`__item__${index}__`}
-								className='border rounded-[1.25rem] overflow-hidden flex flex-col border-[#0A74EF33] aspect-[1.39]'
+								className='border rounded-xl md:rounded-[1.25rem] overflow-hidden flex flex-col border-[#0A74EF33] aspect-[1.2] md:aspect-auto lg:aspect-[1.39]'
 							>
 								<figure
 									style={{ backgroundImage: `url(/images/about-img-${index + 2}.png)` }}
-									className='flex-1 bg-cover'
+									className='flex-1 md:min-h-40 md:max-h-40 max-h-max lg:max-h-max lg:min-h-0 min-h-0 bg-cover'
 								/>
-								<div className='p-[2.5rem_1.25rem] min-h-52.5 justify-center flex-col flex gap-1'>
-									<h4 className='text-black font-medium text-[1.25rem]'>
+								<div className='p-[1rem_.75rem] md:p-[2.5rem_1.25rem] min-h-0 md:min-h-52.5 justify-center flex-col flex gap-1 md:gap-2'>
+									<h4 className='text-black font-medium text-[1rem] md:text-[1.25rem]'>
 										{item?.title}
 									</h4>
 									<p
-										className={`leading-8 font-light text-[1rem] ${inter?.className} text-justify`}
+										className={`leading-5 md:leading-8 font-light text-[0.75rem] md:text-[1rem] ${inter?.className} text-justify`}
 									>
 										{item?.content}{' '}
 										<Link
@@ -112,34 +112,34 @@ const About = () => {
 
 			<TestimonialCarousel />
 
-			<section className='px-20 bg-[url(/images/dust-bg.png)] bg-center bg-cover py-20'>
+			<section className='px-6 lg:px-20 bg-[url(/images/dust-bg.png)] bg-center bg-cover py-8 md:py-20'>
 				<div className='max-w-350 mx-auto'>
-					<h2 className='text-black font-medium text-[2.5rem] text-center mb-5'>
+					<h2 className='text-black font-semibold md:font-medium text-[1.25rem] md:text-[2.5rem] text-center mb-2 md:mb-5'>
 						Visual Chronicles
 					</h2>
 					<p
-						className={`text-black leading-8 text-[1rem] text-center font-normal ${inter?.className} mb-10`}
+						className={`text-black leading-5 md:leading-8 text-[0.75rem] md:text-[1rem] text-center font-normal ${inter?.className} mb-6 md:mb-10`}
 					>
 						Relive the spectacular moments and amazing memories from our events.
 					</p>
-					<div className='grid grid-cols-3 mb-10 gap-10'>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-6 md:mb-10 gap-4 md:gap-6 lg:gap-10'>
 						{Array.from({ length: 6 }, (_, index) => (
 							<img
 								key={`__image__${index}__`}
 								alt={`About Image ${index + 8}`}
 								src={`/images/about-img-${index + 8}.png`}
-								className='rounded-[1.25rem] overflow-hidden'
+								className='rounded-xl md:rounded-[1.25rem] overflow-hidden w-full h-auto object-cover'
 							/>
 						))}
 					</div>
 					<Button
 						icon={{
 							url: 'hugeicons:arrow-right-01',
-							width: '2rem',
-							height: '2rem',
+							width: '1.5rem',
+							height: '1.5rem',
 						}}
 						url='https://drive.google.com/drive/folders/1oglXz-N4YJRUwSpGSwvTF2HfZ80SaV0i'
-						className='p-[1.25rem_2.5rem] mx-auto w-fit'
+						className='p-[.75rem_1.5rem] md:p-[1.25rem_2.5rem] mx-auto w-fit'
 						variant='outlined'
 					>
 						View More

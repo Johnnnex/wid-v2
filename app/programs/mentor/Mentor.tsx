@@ -8,13 +8,13 @@ const Mentor = () => {
 	return (
 		<>
 			<HeroV2 bgUrl='programs-hero-img.png'>
-				<h1 className='text-[2.5rem] font-medium tracking-[1.6px] text-white'>
+				<h1 className='text-[1.5rem] md:text-[2.5rem] font-semibold md:font-medium tracking-[0.96px] md:tracking-[1.6px] text-white'>
 					Be A Mentor
 				</h1>
-				<h4 className='text-[1.25rem] font-normal mb-5 tracking-[.8px] text-white'>
+				<h4 className='text-[1rem] md:text-[1.25rem] font-normal mb-3 md:mb-5 tracking-[0.64px] md:tracking-[.8px] text-white'>
 					Learn. Build. Lead.
 				</h4>
-				<p className='text-white leading-8 font-normal text-[1rem] max-w-260 mx-auto text-center'>
+				<p className='text-white leading-5 md:leading-8 font-normal text-[0.75rem] md:text-[1rem] max-w-full md:max-w-260 mx-auto text-center'>
 					Have you successfully navigated the complexities of Web3, DeFi, or the
 					broader tech industry? Your experience is invaluable. Mentoring is the most
 					direct way to accelerate the careers of aspiring women who are ready to
@@ -22,21 +22,21 @@ const Mentor = () => {
 				</p>
 			</HeroV2>
 
-			<section className='px-20 bg-[url(/images/dust-bg.png)] bg-center bg-cover py-[5rem_11.25rem]'>
-				<div className='max-w-350 flex gap-10 items-start mx-auto'>
+			<section className='px-6 lg:px-20 bg-[url(/images/dust-bg.png)] bg-center bg-cover py-8 md:py-[5rem_11.25rem]'>
+				<div className='max-w-350 flex flex-col md:flex-col-reverse lg:flex-row gap-6 md:gap-10 items-start mx-auto'>
 					<img
 						src='/images/programs-img-7.png'
 						alt='Meet The Mentors'
-						className='w-77 rounded-[1.25rem]'
+						className='w-full lg:w-77 rounded-xl md:rounded-[1.25rem]'
 					/>
-					<div className='flex-1'>
-						<h3 className='text-[2.5rem] tracking-[1.2px] font-medium'>
+					<div className='flex-1 w-full'>
+						<h3 className='text-[1.25rem] md:text-[2.5rem] tracking-[0.75px] md:tracking-[1.2px] text-center md:text-left font-semibold md:font-medium mb-3 md:mb-4'>
 							Skill Up Cohort 3.0; The Mentorship Program
 						</h3>
 						<p
 							className={cn(
 								inter?.className,
-								'text-black leading-8! mb-5 text-justify font-normal text-[1rem]'
+								'text-black leading-5! md:leading-8! mb-4 md:mb-5 text-justify font-normal text-[0.75rem] md:text-[1rem]'
 							)}
 						>
 							Women in DeFi is recruiting mentors to join our academy programs
@@ -51,7 +51,7 @@ const Mentor = () => {
 						</p>
 						<Button
 							url='https://forms.gle/EAa441K38eoMcVtQ8'
-							className='p-[1.25rem_2.5rem] w-fit'
+							className='p-[.75rem_1.5rem] mx-auto md:ml-0 md:p-[1.25rem_2.5rem] w-fit'
 						>
 							Apply Here
 						</Button>

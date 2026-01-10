@@ -6,36 +6,40 @@ import { cn } from '@/lib/utils';
 const Chapters = () => {
 	return (
 		<>
-			<section className='pt-39 bg-white'>
-				<section className='px-20 bg-[url(/images/dust-bg.png)] bg-center bg-cover py-30'>
+			<section className='pt-20 lg:pt-39 bg-white'>
+				<section className='px-6 lg:px-20 bg-[url(/images/dust-bg.png)] bg-center bg-cover py-8 md:py-20 lg:py-30'>
 					<div className='max-w-350 mx-auto'>
-						<h1 className='text-[2.5rem] font-semibold text-center mb-3'>
+						<h1 className='text-[1.5rem] md:text-[2.5rem] font-semibold text-center mb-2 md:mb-3'>
 							All Our WID Chapters Across The Globe
 						</h1>
 						<p
 							className={cn(
 								inter?.className,
-								'text-center w-193.25 mx-auto leading-8! mb-8.25 font-normal text-[1rem]'
+								'text-center w-full md:w-193.25 mx-auto leading-5 md:leading-8 mb-6 md:mb-8.25 font-normal text-[0.75rem] md:text-[1rem]'
 							)}
 						>
 							Join our community and engage with over 8000+ fellow African women in the
 							Web3 space, hailing from various corners of the continent.
 						</p>
-						<div className='grid grid-cols-4 gap-5'>
+						<div className='flex flex-col gap-4 md:gap-5 md:grid md:grid-cols-2 lg:grid-cols-4'>
 							{Array.from({ length: 4 }).map((_, colIndex) => {
 								const isOddColumn = colIndex % 2 === 0;
+								const isOddRow = colIndex % 2 === 0;
 								const firstImageIndex = colIndex * 2 + 1;
 								const secondImageIndex = colIndex * 2 + 2;
 
 								return (
 									<div
 										key={`col-${colIndex}`}
-										className='grid grid-rows-7 h-125 gap-5'
+										className='grid grid-cols-7 h-50 gap-4 md:grid-rows-7 md:grid-cols-1 md:h-125 md:gap-5'
 									>
 										<div
 											className={cn(
-												'relative overflow-hidden rounded-[1.25rem]',
-												isOddColumn ? 'row-span-4' : 'row-span-3'
+												'relative overflow-hidden rounded-xl md:rounded-[1.25rem]',
+												isOddRow ? 'col-span-4' : 'col-span-3',
+												isOddColumn
+													? 'md:col-span-1 md:row-span-4'
+													: 'md:col-span-1 md:row-span-3'
 											)}
 										>
 											<img
@@ -46,8 +50,11 @@ const Chapters = () => {
 										</div>
 										<div
 											className={cn(
-												'relative overflow-hidden rounded-[1.25rem]',
-												!isOddColumn ? 'row-span-4' : 'row-span-3'
+												'relative overflow-hidden rounded-xl md:rounded-[1.25rem]',
+												!isOddRow ? 'col-span-4' : 'col-span-3',
+												!isOddColumn
+													? 'md:col-span-1 md:row-span-4'
+													: 'md:col-span-1 md:row-span-3'
 											)}
 										>
 											<img
@@ -74,49 +81,91 @@ const Chapters = () => {
 				}}
 			/>
 
-			<section className='px-20 bg-[url(/images/dust-bg.png)] bg-center bg-cover py-20'>
+			<section className='px-6 lg:px-20 bg-[url(/images/dust-bg.png)] bg-center bg-cover py-8 md:py-20'>
 				<div className='max-w-350 mx-auto'>
-					<h2 className='text-black font-semibold mb-3 text-[2.5rem] text-center '>
+					<h2 className='text-black font-semibold mb-2 md:mb-3 text-[1.25rem] md:text-[2.5rem] text-center'>
 						WID Chapters
 					</h2>
 					<p
 						className={cn(
 							inter?.className,
-							'text-black text-[1rem] leading-8! font-normal text-center mb-10'
+							'text-black text-[0.75rem] md:text-[1rem] leading-5 md:leading-8 font-normal text-center mb-6 md:mb-10'
 						)}
 					>
 						Ready to become a Blockchain Baddie? Join a WID chapter in your region
 					</p>
-					<div className='grid grid-cols-4 gap-[1.69rem_1.75rem]'>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-[1.69rem_1.75rem]'>
 						{[
-							{ title: 'WID Lagos State Chapter', url: '' },
-							{ title: 'WID Kano State Chapter', url: '' },
-							{ title: 'WID Edo State Chapter', url: '' },
+							{ title: 'WID Lagos State Chapter', url: 'http://linktr.ee/WIDLagos' },
+							{ title: 'WID Kano State Chapter', url: 'https://linktr.ee/widkano' },
+							{ title: 'WID Edo State Chapter', url: 'https://linktr.ee/WID_EDO' },
 							{ title: 'WID Delta State Chapter', url: '' },
-							{ title: 'WID Akwa-Ibom State Chapter', url: '' },
-							{ title: 'WID Anambra State Chapter', url: '' },
-							{ title: 'WID Abuja State Chapter', url: '' },
-							{ title: 'WID Ogun State Chapter', url: '' },
-							{ title: 'WID Enugu State Chapter', url: '' },
-							{ title: 'WID Osun State Chapter', url: '' },
-							{ title: 'WID Plateau State Chapter', url: '' },
+							{
+								title: 'WID Akwa-Ibom State Chapter',
+								url: 'https://linktr.ee/widakwaibom',
+							},
+							{
+								title: 'WID Anambra State Chapter',
+								url: 'https://linktr.ee/WIDAnambra',
+							},
+							{ title: 'WID Abuja Chapter', url: 'https://linktr.ee/widabujaa' },
+							{
+								title: 'WID Ogun State Chapter',
+								url: 'https://linktr.ee/womenindefiogunchapter',
+							},
+							{ title: 'WID Enugu State Chapter', url: 'https://linktr.ee/WID_Enugu' },
+							{ title: 'WID Osun State Chapter', url: 'https://linktr.ee/WID_osun' },
+							{
+								title: 'WID Plateau State Chapter',
+								url: 'https://linktr.ee/Widplateau',
+							},
 							{ title: 'WID Cross Rivers State Chapter', url: '' },
-							{ title: 'WID Kogi State Chapter', url: '' },
-							{ title: 'WID Bayelsa State Chapter', url: '' },
-							{ title: 'WID Oyo State Chapter', url: '' },
-							{ title: 'WID Nairobi Chapter', url: '' },
-						]?.map((item, index) => (
+							{ title: 'WID Kogi State Chapter', url: 'https://linktr.ee/WID_Kogi1' },
+							{
+								title: 'WID Bayelsa State Chapter',
+								url: 'https://linktr.ee/widbayelsa',
+							},
+							{ title: 'WID Oyo State Chapter', url: 'https://linktr.ee/widoyo' },
+							{ title: 'WID Nairobi Chapter', url: 'https://linktr.ee/wid_nairobi' },
+						].map((item, index) => (
 							<div
 								key={`__item__${index}`}
-								className='aspect-square flex flex-col rounded-t-[1.25rem] overflow-hidden'
+								className='aspect-square flex flex-col rounded-t-xl md:rounded-t-[1.25rem] overflow-hidden'
 							>
 								<figure className='flex-1 bg-no-repeat bg-cover bg-[url(/images/community-img-9.png)]' />
-								<div className='flex flex-col items-center bg-white border border-[#0A74EF80] rounded-b-[1.25rem] p-[1.25rem_2.125rem]'>
-									<h6 className='text-black text-[1rem] font-normal leading-8!'>
+								<div className='flex flex-col items-center bg-white border border-[#0A74EF80] rounded-b-xl md:rounded-b-[1.25rem] p-4 md:p-[1.25rem_2.125rem]'>
+									<h6 className='text-black text-[0.875rem] md:text-[1rem] font-normal leading-6 md:leading-8 text-center'>
 										{item?.title}
 									</h6>
 									<a
-										className='leading-8! text-[1rem] font-normal text-[#0A74EF]'
+										className='leading-6 md:leading-8 text-[0.875rem] md:text-[1rem] font-normal text-[#0A74EF]'
+										href={item?.url}
+										target='_blank'
+									>
+										Join Community
+									</a>
+								</div>
+							</div>
+						))}
+					</div>
+					<div className='grid grid-cols-1 gap-4 md:gap-[1.69rem_1.75rem] mt-4 md:mt-[1.69rem] md:max-w-[50%] md:mx-auto lg:max-w-[25%]'>
+						{[
+							{
+								title: 'WID Rivers State Chapter',
+								url: 'https://linktr.ee/widrivers',
+							},
+						].map((item, index) => (
+							<div
+								key={`__item__${index + 16}`}
+								className='aspect-square flex flex-col rounded-t-xl md:rounded-t-[1.25rem] overflow-hidden'
+							>
+								<figure className='flex-1 bg-no-repeat bg-cover bg-[url(/images/community-img-9.png)]' />
+								<div className='flex flex-col items-center bg-white border border-[#0A74EF80] rounded-b-xl md:rounded-b-[1.25rem] p-4 md:p-[1.25rem_2.125rem]'>
+									<h6 className='text-black text-[0.875rem] md:text-[1rem] font-normal leading-6 md:leading-8 text-center'>
+										{item?.title}
+									</h6>
+									<a
+										className='leading-6 md:leading-8 text-[0.875rem] md:text-[1rem] font-normal text-[#0A74EF]'
 										href={item?.url}
 										target='_blank'
 									>

@@ -148,7 +148,7 @@ const Footer = () => {
 															const dropdownId = `${sectionIndex}-${linkIndex}`;
 															setOpenDropdown(openDropdown === dropdownId ? null : dropdownId);
 														}}
-														className='flex items-center gap-2 text-black hover:text-blue-600 transition-colors mx-auto lg:mx-0'
+														className='flex items-center gap-0.5 md:gap-2 text-black hover:text-blue-600 transition-colors mx-auto lg:mx-0'
 													>
 														{link.label}
 														<Icon

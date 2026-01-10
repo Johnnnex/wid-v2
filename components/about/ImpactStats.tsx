@@ -28,7 +28,7 @@ const ImpactStats = () => {
 				<h4 className='text-white text-[1.25rem] md:text-[2.25rem] font-semibold lg:w-33.25 text-center lg:text-left'>
 					Our Impact
 				</h4>
-				<div className='w-45 lg:w-0.5 h-[0.6px] md:h-0.5 lg:h-48.25 bg-white' />
+				<div className='w-45 lg:w-0.5 h-[0.6px] md:h-px lg:h-48.25 bg-white' />
 				<div className='flex flex-wrap lg:flex-nowrap flex-1 justify-center lg:justify-between items-center gap-6 lg:gap-0'>
 					{[
 						{ number: 8, suffix: 'k+', content: 'Community Members' },
