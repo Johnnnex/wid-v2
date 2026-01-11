@@ -10,52 +10,47 @@ import { cn } from '@/lib/utils';
 
 const testimonialData = [
 	{
-		quote: `I won a MiFi and was also accepted into the 3.0 Technical Writing Cohort. Both have been very impactful. The MiFi helped me stay consistent, and the cohort is helping me grow my Web3 knowledge and writing skills. I'm very thankful for this opportunity.`,
+		quote: `I won a MiFi and got accepted into the 3.0 Technical Writing Cohort. The MiFi helped me stay consistent, and the cohort is helping me grow my Web3 knowledge and writing skills.`,
 		name: 'Kuti Peace Metalayo',
 		imgName: 'kuti-peace-metalayo.jpg',
 	},
 	{
-		quote: `I'm opportuned to be part of the DeFi Skill-up Cohort 3.0 on the project management track. I must say I'm really grateful, because I've learnt a lot in the past weeks and even earned some certificates to the courses they gave us to practice. Thank you so much. God bless WID.`,
+		quote: `Being part of the DeFi Skill-up Cohort 3.0 has been incredible. I've learned so much and earned certificates along the way. Thank you, WID!`,
 		name: 'Abiodun Fathia Ayomide',
 		imgName: 'abiodun-fathia-ayomide.jpg',
 	},
 	{
-		quote: `My journey with Women in DeFi has been nothing short of inspiring. Through the community, I've gained deeper knowledge about blockchain, personal growth, and the power of women supporting women. One of the highlights of my experience was winning a WiFi device during the 2025 WID Summit — a reward that not only motivated me but also made it easier for me to keep learning, connecting, and building. WID has truly been a space of empowerment, opportunity, and endless inspiration.`,
+		quote: `WID has been nothing short of inspiring. Winning a WiFi device at the 2025 Summit made it easier to keep learning and building. This community is true empowerment.`,
 		name: 'Peace Toluwanimi Omosehin',
 		imgName: 'peaceomosehin.jpg',
 	},
 	{
-		quote: `Being part of Women In DeFi has been truly empowering. Through programs like the Laptop and Wi-Fi support, I've been able to fully engage in Web3 learning, content creation, and community projects.`,
+		quote: `Through programs like the Laptop and Wi-Fi support, I've been able to fully engage in Web3 learning, content creation, and community projects.`,
 		name: 'Agbonyin Ifeoluwa Grace',
 		imgName: 'zoeyblaze5.jpeg',
 	},
 	{
-		quote: `Receiving a laptop sponsorship from Women in DeFi at the 2025 WID Summit changed my Web3 journey completely. Before then, I often struggled with limited tools, even though I had the passion and drive to grow. The moment I got the laptop, it felt like someone finally said, "We believe in you, we see you.......keep going girl💪🏽"`,
+		quote: `Receiving a laptop sponsorship at the 2025 WID Summit changed everything. It felt like someone finally said, "We believe in you, keep going girl!"`,
 		name: 'Ofili Ifeanyi Christabel',
 		imgName: 'ofililfean75262.jpg',
 	},
 	{
-		quote: `My journey in Web3 has been one of bold learning and steady growth, and WID played a role in it. Now from being a curious explorer to a community builder, product manager and educator, I have evolved into someone shaping conversations and creating real impact in the decentralized space.`,
+		quote: `WID played a huge role in my Web3 journey. From curious explorer to community builder and educator, I've evolved into someone creating real impact in the decentralized space.`,
 		name: 'Okoli Uchechi Vivian',
 		imgName: 'qingvee.jpg',
 	},
 	{
-		quote: `I'm still pinching myself, but I'll try to share my story without getting too emotional. Mid 2023, I finished secondary school, and honestly, I was lost. I didn't know what I wanted to do or where I was going. Then, my friend told me about Women in DeFi (WID), and I'm so grateful she did. WID has changed me, inspired me, and influenced me in ways I never thought possible. I'm not where I want to be yet, but I'm not where I used to be, and that's all that matters.`,
+		quote: `After finishing secondary school in 2023, I was lost. Then I found WID, and it changed me completely. I'm not where I want to be yet, but I'm not where I used to be.`,
 		name: 'Victoria John',
 		imgName: 'justvictorya.jpg',
 	},
-	// {
-	// 	quote: `WID gave me a community and platform. It gave me a renewed mindset that growth can be attained and sustainable and wealth at a young age is achievable`,
-	// 	name: 'HederaWrites',
-	// 	imgName: 'hederawrites',  Duplicate image
-	// },
 	{
-		quote: `The Women in DeFi program was my gateway into the Web3 space, providing both clarity and confidence as I began my journey. Beyond technical knowledge, it helped me cultivate diligence, discipline, and excellence in execution. I'm deeply grateful for the opportunity and the empowering community it fostered among women shaping the future of decentralized finance.`,
+		quote: `WID was my gateway into Web3, providing clarity and confidence. Beyond technical knowledge, it helped me cultivate diligence, discipline, and excellence in execution.`,
 		name: 'Nikpis',
 		imgName: 'nikpis.jpg',
 	},
 	{
-		quote: `I joined WID last year at my lowest, and it has been a guiding light in my journey. Today, I'm working as a marketer for a top tier project, something made possible because WID equipped me with the knowledge, skills, and mindset to take action and succeed in the space. I am proud WID Baddie and I do not take it for granted.`,
+		quote: `I joined WID at my lowest, and it's been a guiding light. Today, I'm working as a marketer for a top-tier project. I'm a proud WID Baddie!`,
 		name: 'Keera',
 		imgName: 'keera.jpg',
 	},

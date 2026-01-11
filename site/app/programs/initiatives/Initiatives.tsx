@@ -42,7 +42,7 @@ const Initiatives = () => {
 									style={{
 										backgroundImage: `url(/images/programs-img-${index + 5}.png)`,
 									}}
-									className='flex-1 min-h-40 max-h-40 lg:max-h-max lg:min-h-0 bg-cover'
+									className='flex-1 min-h-40 max-h-40 lg:max-h-full lg:min-h-0 bg-cover'
 								/>
 								<div className='p-[1rem_.75rem] md:p-6 min-h-0 md:min-h-57.5 flex-col flex gap-1'>
 									<h4 className='text-black font-medium text-[1rem] md:text-[1.25rem]'>

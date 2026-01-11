@@ -55,7 +55,7 @@ const ProgramsGrid = () => {
 						>
 							<figure
 								style={{ backgroundImage: `url(/images/about-img-${index + 2}.png)` }}
-								className='flex-1 min-h-40 max-h-40 lg:max-h-max lg:min-h-0 bg-cover'
+								className='flex-1 min-h-40 max-h-40 lg:max-h-full lg:min-h-0 bg-cover'
 							/>
 							<div className='p-[1rem_.75rem] md:p-6 min-h-0 md:min-h-74.5 flex-col md:flex-1 justify-center flex gap-1'>
 								<h4 className='text-black font-medium text-[1rem] md:text-[1.25rem]'>
@@ -86,7 +86,7 @@ const ProgramsGrid = () => {
 				>
 					<figure
 						style={{ backgroundImage: `url(/images/about-img-2.png)` }}
-						className='flex-1 md:min-h-80 md:max-h-80 max-h-40 lg:max-h-max lg:min-h-0 min-h-40 bg-cover bg-center'
+						className='flex-1 md:min-h-80 md:max-h-80 max-h-40 lg:max-h-full lg:min-h-0 min-h-40 bg-cover bg-center'
 					/>
 					<div className='p-[1rem_.75rem] md:p-[1.5rem_1.125rem] items-center flex-col flex gap-1'>
 						<h4 className='text-black font-medium mb-1 text-[1rem] md:text-[1.25rem]'>

@@ -78,7 +78,7 @@ const About = () => {
 							>
 								<figure
 									style={{ backgroundImage: `url(/images/about-img-${index + 2}.png)` }}
-									className='flex-1 md:min-h-40 md:max-h-40 max-h-max lg:max-h-max lg:min-h-0 min-h-0 bg-cover'
+									className='flex-1 md:min-h-40 md:max-h-40 max-h-full lg:max-h-full lg:min-h-0 min-h-0 bg-cover'
 								/>
 								<div className='p-[1rem_.75rem] md:p-[2.5rem_1.25rem] min-h-0 md:min-h-52.5 justify-center flex-col flex gap-1 md:gap-2'>
 									<h4 className='text-black font-medium text-[1rem] md:text-[1.25rem]'>

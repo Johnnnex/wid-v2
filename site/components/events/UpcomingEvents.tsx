@@ -9,6 +9,7 @@ import { client, urlFor } from '@/lib/sanity';
 import { Icon } from '@iconify/react';
 import { toast } from 'sonner';
 import { Button } from '../common';
+import FlipNumbers from 'react-flip-numbers';
 
 interface Event {
 	_id: string;
@@ -214,8 +215,21 @@ const UpcomingEvents = () => {
 										key={index}
 										className='bg-white/10 rounded-lg md:rounded-xl p-2 md:p-3 text-center'
 									>
-										<div className='text-white text-[1.25rem] md:text-[2rem] font-bold font-mono leading-none mb-1'>
-											{String(item.value).padStart(2, '0')}
+										<div className='text-white text-[1.25rem] md:text-[2rem] font-bold font-mono leading-none mb-1 flex justify-center'>
+											<FlipNumbers
+												height={
+													typeof window !== 'undefined' && window.innerWidth >= 768 ? 32 : 20
+												}
+												width={
+													typeof window !== 'undefined' && window.innerWidth >= 768 ? 20 : 13
+												}
+												color='white'
+												background='transparent'
+												play
+												perspective={1000}
+												numbers={String(item.value).padStart(2, '0')}
+												duration={0.5}
+											/>
 										</div>
 										<div className='text-white/80 text-[0.625rem] md:text-[0.875rem] font-normal'>
 											{item.label}
