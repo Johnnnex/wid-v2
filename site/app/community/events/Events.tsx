@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 const Events = () => {
 	return (
 		<>
-			<section className='pt-8 md:pt-20 lg:pt-39 bg-white'>
+			<section className='pt-20 lg:pt-39 bg-white'>
 				<section className='px-6 lg:px-20 bg-[url(/images/texture-bg-fullx2.png)] bg-center bg-cover py-8 md:py-20'>
 					<div className='max-w-350 flex flex-col-reverse lg:flex-row gap-6 md:gap-10 lg:gap-20 items-center mx-auto'>
 						<div className='flex-1 w-full'>
