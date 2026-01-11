@@ -90,7 +90,7 @@ const TestimonialCarousel = () => {
 								<div className='border border-[#0A74EF80] h-80 overflow-hidden min-h-125 md:h-100 rounded-xl md:rounded-[1.25rem] flex flex-col md:flex-row gap-0 md:gap-12.75'>
 									<img
 										className={cn(
-											'w-full h-full md:w-100 object-cover object-center',
+											'w-full h-[60%] md:h-full md:w-100 object-cover object-center',
 											index === 2 ? 'object-top md:object-center' : ''
 										)}
 										alt={testimonial.name}
