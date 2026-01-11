@@ -684,7 +684,7 @@ const InputField = memo(
 							)}
 						</div>
 						{!!error && (
-							<p className='text-[0.875rem] font-normal leading-5 text-[#F04438]'>
+							<p className='text-[.625rem] md:text-[0.875rem] font-normal leading-5 text-[#F04438]'>
 								{error}
 							</p>
 						)}
