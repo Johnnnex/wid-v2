@@ -9,7 +9,6 @@ import { Button, CTA, HeroV2 } from '@/components/common';
 import { PartnerLogoStrip } from '@/components/partners';
 import { TestimonialCarousel } from '@/components/testimonials';
 import { inter } from '../layout';
-import Link from 'next/link';
 
 const About = () => {
 	return (

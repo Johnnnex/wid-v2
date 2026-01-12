@@ -5,7 +5,7 @@
 import { inter } from '@/app/layout';
 import { cn } from '@/lib/utils';
 import { useCallback, useEffect, useState } from 'react';
-import { client, urlFor } from '@/lib/sanity';
+import { client, urlFor } from '@/lib';
 import { Icon } from '@iconify/react';
 import { toast } from 'sonner';
 import { Button } from '../common';

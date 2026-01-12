@@ -10,7 +10,7 @@ const Team = () => {
 
 	return (
 		<>
-			<section className='pt-8 md:pt-20 lg:pt-39 bg-white'>
+			<section className='pt-20 lg:pt-39 bg-white'>
 				<section className='px-6 lg:px-20 bg-[url(/images/texture-bg-fullx2.png)] bg-center bg-cover py-8 md:py-20 lg:py-30'>
 					<div className='max-w-350 mx-auto'>
 						<h1 className='text-[1.5rem] md:text-[2.5rem] font-semibold text-center mb-2 md:mb-3'>
