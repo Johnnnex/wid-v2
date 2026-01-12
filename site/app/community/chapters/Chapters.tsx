@@ -96,67 +96,29 @@ const Chapters = () => {
 					</p>
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-[1.69rem_1.75rem]'>
 						{[
-							{ title: 'WID Lagos State Chapter', url: 'http://linktr.ee/WIDLagos' },
-							{ title: 'WID Kano State Chapter', url: 'https://linktr.ee/widkano' },
-							{ title: 'WID Edo State Chapter', url: 'https://linktr.ee/WID_EDO' },
-							{ title: 'WID Delta State Chapter', url: '' },
+							{ title: 'WID Abuja', url: 'https://linktr.ee/widabujaa' },
+							{ title: 'WID Akwa-Ibom State', url: 'https://linktr.ee/widakwaibom' },
+							{ title: 'WID Anambra State', url: 'https://linktr.ee/WIDAnambra' },
+							{ title: 'WID Bayelsa State', url: 'https://linktr.ee/widbayelsa' },
+							{ title: 'WID Cross Rivers State', url: '' },
+							{ title: 'WID Delta State', url: '' },
+							{ title: 'WID Edo State', url: 'https://linktr.ee/WID_EDO' },
+							{ title: 'WID Enugu State', url: 'https://linktr.ee/WID_Enugu' },
+							{ title: 'WID Kano State', url: 'https://linktr.ee/widkano' },
+							{ title: 'WID Kogi State', url: 'https://linktr.ee/WID_Kogi1' },
+							{ title: 'WID Lagos State', url: 'http://linktr.ee/WIDLagos' },
+							{ title: 'WID Nairobi', url: 'https://linktr.ee/wid_nairobi' },
 							{
-								title: 'WID Akwa-Ibom State Chapter',
-								url: 'https://linktr.ee/widakwaibom',
-							},
-							{
-								title: 'WID Anambra State Chapter',
-								url: 'https://linktr.ee/WIDAnambra',
-							},
-							{ title: 'WID Abuja Chapter', url: 'https://linktr.ee/widabujaa' },
-							{
-								title: 'WID Ogun State Chapter',
+								title: 'WID Ogun State',
 								url: 'https://linktr.ee/womenindefiogunchapter',
 							},
-							{ title: 'WID Enugu State Chapter', url: 'https://linktr.ee/WID_Enugu' },
-							{ title: 'WID Osun State Chapter', url: 'https://linktr.ee/WID_osun' },
-							{
-								title: 'WID Plateau State Chapter',
-								url: 'https://linktr.ee/Widplateau',
-							},
-							{ title: 'WID Cross Rivers State Chapter', url: '' },
-							{ title: 'WID Kogi State Chapter', url: 'https://linktr.ee/WID_Kogi1' },
-							{
-								title: 'WID Bayelsa State Chapter',
-								url: 'https://linktr.ee/widbayelsa',
-							},
-							{ title: 'WID Oyo State Chapter', url: 'https://linktr.ee/widoyo' },
-							{ title: 'WID Nairobi Chapter', url: 'https://linktr.ee/wid_nairobi' },
+							{ title: 'WID Osun State', url: 'https://linktr.ee/WID_osun' },
+							{ title: 'WID Oyo State', url: 'https://linktr.ee/widoyo' },
+							{ title: 'WID Plateau State', url: 'https://linktr.ee/Widplateau' },
+							{ title: 'WID Rivers State', url: 'https://linktr.ee/widrivers' },
 						].map((item, index) => (
 							<div
 								key={`__item__${index}`}
-								className='aspect-square flex flex-col rounded-t-xl md:rounded-t-[1.25rem] overflow-hidden'
-							>
-								<figure className='flex-1 bg-no-repeat bg-cover bg-[url(/images/community-img-9.png)]' />
-								<div className='flex flex-col items-center bg-white border border-[#0A74EF80] rounded-b-xl md:rounded-b-[1.25rem] p-4 md:p-[1.25rem_2.125rem]'>
-									<h6 className='text-black text-[0.875rem] md:text-[1rem] font-normal leading-6 md:leading-8 text-center'>
-										{item?.title}
-									</h6>
-									<a
-										className='leading-6 md:leading-8 text-[0.875rem] md:text-[1rem] font-normal text-[#0A74EF]'
-										href={item?.url}
-										target='_blank'
-									>
-										Join Community
-									</a>
-								</div>
-							</div>
-						))}
-					</div>
-					<div className='grid grid-cols-1 gap-4 md:gap-[1.69rem_1.75rem] mt-4 md:mt-[1.69rem] md:max-w-[50%] md:mx-auto lg:max-w-[25%]'>
-						{[
-							{
-								title: 'WID Rivers State Chapter',
-								url: 'https://linktr.ee/widrivers',
-							},
-						].map((item, index) => (
-							<div
-								key={`__item__${index + 16}`}
 								className='aspect-square flex flex-col rounded-t-xl md:rounded-t-[1.25rem] overflow-hidden'
 							>
 								<figure className='flex-1 bg-no-repeat bg-cover bg-[url(/images/community-img-9.png)]' />

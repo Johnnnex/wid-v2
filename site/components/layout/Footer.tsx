@@ -221,12 +221,15 @@ const Footer = () => {
 								url: 'https://www.linkedin.com/company/womenindefi/',
 								icon: 'hugeicons:linkedin-01',
 							},
-							{ url: 'https://youtube.com/@womenindefi', icon: 'hugeicons:youtube' },
+							{
+								url: 'https://youtube.com/@womenindefi_org',
+								icon: 'hugeicons:youtube',
+							},
 							{
 								url: 'https://www.facebook.com/womenindefi',
 								icon: 'hugeicons:facebook-01',
 							},
-							{ url: 'mailto:contact@womenindefi.org', icon: 'hugeicons:mail-01' },
+							{ url: 'mailto:info@womenindefi.org', icon: 'hugeicons:mail-01' },
 						]?.map((socials, index) => (
 							<a
 								key={`__social__link__${index}`}

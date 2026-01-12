@@ -81,7 +81,7 @@ const Header = () => {
 										{ name: 'Events', url: '/community/events' },
 									],
 								},
-								{ name: 'Wid Store', url: '/store' },
+								{ name: 'WID Store', url: '/store' },
 							]?.map(({ name, url, dropdown }, index) => (
 								<li
 									className='p-2.5 relative'
@@ -207,7 +207,7 @@ const Header = () => {
 								{ name: 'Events', url: '/community/events' },
 							],
 						},
-						{ name: 'Wid Store', url: '/store' },
+						{ name: 'WID Store', url: '/store' },
 					]?.map(({ name, url, dropdown }, index) => (
 						<li
 							key={`__mobile__nav__item__${index}`}

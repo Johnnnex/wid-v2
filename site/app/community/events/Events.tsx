@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { inter } from '@/app/layout';
-import { Button } from '@/components/common';
 import { PreviousEvents, UpcomingEvents } from '@/components/events';
 import { SuccessStories } from '@/components/programs';
 import { cn } from '@/lib/utils';
@@ -21,22 +20,20 @@ const Events = () => {
 									'mx-auto text-center md:text-left leading-5 md:leading-8 mb-4 md:mb-5 font-normal text-[0.75rem] md:text-[1rem]'
 								)}
 							>
-								We are committed to reaching ambitious women across the region. <br />
-								Check our schedule to find events happening both virtually and in major
-								tech hubs across Africa. <br />
+								We are committed to reaching audacious women across Africa looking to
+								network, collaborate, and learn. <br />
+								Check our schedule to stay updated on all our major physical and virtual
+								events across Africa. <br />
 								Don&apos;t wait for <b className='font-semibold'>permission</b> to{' '}
 								<b className='font-semibold'>lead</b>. Find your{' '}
 								<b className='font-semibold'>momentum with WID.</b>
 							</p>
-							<Button className='p-[.75rem_1.5rem] mx-auto md:ml-0 md:p-[1.25rem_2.5rem]'>
-								Register for WiD Summit
-							</Button>
 						</div>
 						<figure className='flex-1 w-full'>
 							<img
-								src={'/images/community-img-10.png'}
-								alt='Building Bridges - WID'
-								className='w-full border border-[#0A74EF] rounded-xl md:rounded-[1.25rem] aspect-[1.1024]'
+								src={'/images/community-img-11.webp'}
+								alt='Bitcoin Pizza Day - WID'
+								className='w-full border object-cover object-center border-[#0A74EF] rounded-xl md:rounded-[1.25rem] aspect-[1.1024]'
 							/>
 						</figure>
 					</div>

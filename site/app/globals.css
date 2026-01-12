@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+*,
+html {
+	scroll-behavior: smooth;
+}
+
 .react-svg > div > div {
 	display: flex;
 	align-items: center;

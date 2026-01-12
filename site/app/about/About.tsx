@@ -74,27 +74,36 @@ const About = () => {
 						]?.map((item, index) => (
 							<div
 								key={`__item__${index}__`}
-								className='border rounded-xl md:rounded-[1.25rem] overflow-hidden flex flex-col border-[#0A74EF33] aspect-[1.2] md:aspect-auto lg:aspect-[1.39]'
+								className='border rounded-xl md:rounded-[1.25rem] overflow-hidden flex flex-col border-[#0A74EF33]'
 							>
 								<figure
 									style={{ backgroundImage: `url(/images/about-img-${index + 2}.png)` }}
-									className='flex-1 md:min-h-40 md:max-h-40 max-h-full lg:max-h-full lg:min-h-0 min-h-0 bg-cover'
+									className='flex-1 md:min-h-40! md:max-h-40! lg:min-h-70! lg:max-h-70! max-h-35 min-h-35 bg-cover'
 								/>
-								<div className='p-[1rem_.75rem] md:p-[2.5rem_1.25rem] min-h-0 md:min-h-52.5 justify-center flex-col flex gap-1 md:gap-2'>
-									<h4 className='text-black font-medium text-[1rem] md:text-[1.25rem]'>
-										{item?.title}
-									</h4>
-									<p
-										className={`leading-5 md:leading-8 font-light text-[0.75rem] md:text-[1rem] ${inter?.className} text-justify`}
-									>
-										{item?.content}{' '}
-										<Link
-											href={item?.url}
-											className='text-[#0A74EF] hover:underline'
+								<div className='p-[1rem_.75rem] flex-1 md:p-[2.5rem_1.25rem] min-h-0 md:min-h-52.5 justify-between flex-col flex gap-3 md:gap-4'>
+									<div className='space-y-1 flex-1 md:space-y-2'>
+										<h4 className='text-black font-medium text-[1rem] md:text-[1.25rem]'>
+											{item?.title}
+										</h4>
+										<p
+											className={`leading-5 md:leading-8 font-light text-[0.75rem] md:text-[1rem] ${inter?.className} text-justify`}
 										>
-											Learn More
-										</Link>
-									</p>
+											{item?.content}
+										</p>
+									</div>
+									<Button
+										url={item?.url}
+										target='_self'
+										variant='outlined'
+										className='p-[.5rem_1rem] md:p-[.75rem_1.5rem] w-fit mx-auto md:mx-0'
+										icon={{
+											url: 'mdi:arrow-right',
+											width: '1rem',
+											height: '1rem',
+										}}
+									>
+										Learn More
+									</Button>
 								</div>
 							</div>
 						))}

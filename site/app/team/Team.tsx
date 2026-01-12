@@ -61,8 +61,8 @@ const Team = () => {
 									>
 										<figure
 											style={{ backgroundImage: `url(/images/team-img-${index + 1}.png)` }}
-											className='flex-1 bg-cover bg-center'
-										></figure>
+											className='flex-1 bg-cover'
+										/>
 										<div className='p-4 md:p-5 bg-white border border-[#0A74EF80] rounded-b-xl md:rounded-b-[1.25rem]'>
 											<h6 className='text-black text-[0.875rem] md:text-[1rem] font-medium leading-6 md:leading-8'>
 												{item?.name}
@@ -90,8 +90,8 @@ const Team = () => {
 									>
 										<figure
 											style={{ backgroundImage: `url(/images/team-img-${index + 7}.png)` }}
-											className='flex-1 bg-cover bg-center'
-										></figure>
+											className='flex-1 bg-cover'
+										/>
 										<div className='p-4 md:p-5 bg-white border border-[#0A74EF80] rounded-b-xl md:rounded-b-[1.25rem]'>
 											<h6 className='text-black text-[0.875rem] md:text-[1rem] font-medium leading-6 md:leading-8'>
 												{item?.name}
@@ -142,7 +142,7 @@ const Team = () => {
 											style={{
 												backgroundImage: `url(/images/team-img-${index + 10}.png)`,
 											}}
-											className='flex-1 bg-cover bg-center'
+											className='flex-1 bg-cover'
 										/>
 										<div className='p-4 md:p-5 bg-white border border-[#0A74EF80] rounded-b-xl md:rounded-b-[1.25rem]'>
 											<h6 className='text-black text-[0.875rem] md:text-[1rem] font-medium leading-6 md:leading-8'>
@@ -171,7 +171,7 @@ const Team = () => {
 												style={{
 													backgroundImage: `url(/images/team-img-${index + 22}.png)`,
 												}}
-												className='flex-1 bg-cover bg-center'
+												className='flex-1 bg-cover'
 											/>
 											<div className='p-4 md:p-5 bg-white border border-[#0A74EF80] rounded-b-xl md:rounded-b-[1.25rem]'>
 												<h6 className='text-black text-[0.875rem] md:text-[1rem] font-medium leading-6 md:leading-8'>

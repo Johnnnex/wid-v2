@@ -20,17 +20,17 @@ const PreviousEvents = () => {
 		{
 			name: 'Bitcoin Pizza Day 2024',
 			images: [
-				'community-img-11.png',
-				'community-img-12.png',
-				'community-img-13.png',
+				'community-img-11.webp',
+				'community-img-12.webp',
+				'community-img-13.webp',
 			],
 		},
 		{
 			name: 'Codes, Charts and Cocktails 2023',
 			images: [
-				'community-img-11.png',
-				'community-img-12.png',
-				'community-img-13.png',
+				'community-img-15.png',
+				'community-img-16.png',
+				'community-img-17.png',
 			],
 		},
 	];
@@ -70,7 +70,7 @@ const PreviousEvents = () => {
 							>
 								<img
 									src={`/images/${image}`}
-									alt={`WID Past Events`}
+									alt={event.name}
 									className='rounded-xl w-full lg:w-auto md:rounded-[1.25rem] flex-1 aspect-[1.2] object-cover'
 								/>
 							</div>
