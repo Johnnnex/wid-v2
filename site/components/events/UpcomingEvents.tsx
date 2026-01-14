@@ -175,7 +175,7 @@ const UpcomingEvents = () => {
 																	month: 'long',
 																	day: 'numeric',
 															  })
-															: 'Date TBA'}
+															: 'TBA'}
 													</span>
 												</div>
 

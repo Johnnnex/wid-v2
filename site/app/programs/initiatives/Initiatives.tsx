@@ -13,7 +13,7 @@ const Initiatives = () => {
 					Learn. Build. Lead.
 				</h4>
 				<p className='text-white leading-5 md:leading-8 font-normal text-[0.75rem] md:text-[1rem] max-w-full md:max-w-260 mx-auto text-center'>
-					At Women in DeFi (WID), we are not just talking about change—we are
+					At Women in DeFi (WID), we are not just talking about change, we are
 					investing directly in the future of African women in technology. Our
 					initiatives are designed to provide both the knowledge and the tools needed
 					for any woman willing and able to thrive in the Web3 space, regardless of
