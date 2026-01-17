@@ -31,12 +31,12 @@ const Mentor = () => {
 					/>
 					<div className='flex-1 w-full'>
 						<h3 className='text-[1.25rem] md:text-[2.5rem] tracking-[0.75px] md:tracking-[1.2px] text-center md:text-left font-semibold md:font-medium mb-3 md:mb-4'>
-							Skill Up Cohort 3.0; The Mentorship Program
+							Become A Mentor
 						</h3>
 						<p
 							className={cn(
 								inter?.className,
-								'text-black leading-5! md:leading-8! mb-4 md:mb-5 text-justify font-normal text-[0.75rem] md:text-[1rem]'
+								'text-black leading-5! md:leading-8! mb-4 md:mb-5 text-justify font-normal text-[0.75rem] md:text-[1rem]',
 							)}
 						>
 							Women in DeFi is recruiting mentors to join our academy programs

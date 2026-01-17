@@ -32,7 +32,7 @@ const Team = () => {
 										'px-6 md:px-12 transition-all w-full md:w-85.5 py-3 md:py-3.75 font-normal text-[0.875rem] md:text-[1rem] duration-[.4s] rounded-[1.25rem] md:rounded-[2.5rem]',
 										index === activeTab
 											? 'bg-[#0A74EF] text-white'
-											: 'bg-transparent border text-[#000000B2] border-[#0A74EF33] hover:bg-[#0A74EF08]'
+											: 'bg-transparent border text-[#000000B2] border-[#0A74EF33] hover:bg-[#0A74EF08]',
 									)}
 								>
 									{buttonText}
@@ -43,14 +43,14 @@ const Team = () => {
 						<div
 							className={cn(
 								'py-6 md:py-10 transition-opacity duration-300',
-								activeTab === 0 ? 'opacity-100' : 'opacity-0 hidden'
+								activeTab === 0 ? 'opacity-100' : 'opacity-0 hidden',
 							)}
 						>
 							<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10'>
 								{[
 									{ name: 'Sarah Idahosa', title: 'Founder' },
 									{ name: 'Onone Peace Ega', title: 'Programs Lead' },
-									{ name: 'Francis Rachael Biabelemoye', title: 'Partnership Manager' },
+									{ name: 'Francis Rachael Biobelemoye', title: 'Partnership Manager' },
 									{ name: 'Progress Ochuko Eyaadah', title: 'DevRel Lead' },
 									{ name: 'Victory Adewojo', title: 'Integration Specialist' },
 									{ name: 'Ogechi Welechi', title: 'Marketing & PR Lead' },
@@ -70,7 +70,7 @@ const Team = () => {
 											<p
 												className={cn(
 													inter?.className,
-													'text-[0.75rem] md:text-[1rem] font-normal leading-5 md:leading-8 text-black'
+													'text-[0.75rem] md:text-[1rem] font-normal leading-5 md:leading-8 text-black',
 												)}
 											>
 												{item?.title}
@@ -82,7 +82,7 @@ const Team = () => {
 							<div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mt-6 md:mt-10 lg:max-w-[66.666%] lg:mx-auto'>
 								{[
 									{ name: 'Tega Claire Agbadagri', title: 'Content Lead' },
-									{ name: 'Owuo Ofure Blessing', title: 'Designer' },
+									{ name: 'Ovuo Ofure Blessing', title: 'Designer' },
 								]?.map((item, index) => (
 									<div
 										key={`__item__${index + 6}`}
@@ -99,7 +99,7 @@ const Team = () => {
 											<p
 												className={cn(
 													inter?.className,
-													'text-[0.75rem] md:text-[1rem] font-normal leading-5 md:leading-8 text-black'
+													'text-[0.75rem] md:text-[1rem] font-normal leading-5 md:leading-8 text-black',
 												)}
 											>
 												{item?.title}
@@ -113,24 +113,24 @@ const Team = () => {
 						<div
 							className={cn(
 								'py-6 md:py-10 transition-opacity duration-300',
-								activeTab === 1 ? 'opacity-100' : 'opacity-0 hidden'
+								activeTab === 1 ? 'opacity-100' : 'opacity-0 hidden',
 							)}
 						>
 							<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10'>
 								{[
 									{ name: 'Mary Sule', title: 'Programs Associate' },
-									{ name: 'Aishat Inioluwa Abdullahi', title: 'Programs Associate' },
+									{ name: 'Aishat Inikpi Abdullahi', title: 'Programs Associate' },
 									{ name: 'Ayo Ibrahim', title: 'Community Associate' },
-									{ name: 'Yunusa Oluwatoliloba', title: 'Community Associate' },
-									{ name: 'Praise Abisiyuwa', title: 'Associate Partnership Manager' },
+									{ name: 'Yunusa Oluwatobiloba', title: 'Community Associate' },
+									{ name: 'Praise Abieyuwa', title: 'Associate Partnership Manager' },
 									{
-										name: 'Owolawi Boluwotife Mercy',
+										name: 'Owolawi Boluwatife Mercy',
 										title: 'Marketing and PR Associate',
 									},
 									{ name: 'Ayomide Akinwale', title: 'Content Associate' },
 									{ name: 'Ofili Ifeanyi Christabel', title: 'Partnership Support' },
 									{ name: 'Victoria Adedayo', title: 'DevRel Support' },
-									{ name: 'Orjimari Favour', title: 'DevRel Support' },
+									{ name: 'Orjimazi Favour', title: 'DevRel Support' },
 									{ name: 'Choice Gift Olowu', title: 'DevRel Support' },
 									{ name: 'Stephanie Okudo', title: 'Content Support' },
 								]?.map((item, index) => (
@@ -151,7 +151,7 @@ const Team = () => {
 											<p
 												className={cn(
 													inter?.className,
-													'text-[0.75rem] md:text-[1rem] font-normal leading-5 md:leading-8 text-black'
+													'text-[0.75rem] md:text-[1rem] font-normal leading-5 md:leading-8 text-black',
 												)}
 											>
 												{item?.title}
@@ -161,7 +161,7 @@ const Team = () => {
 								))}
 							</div>
 							<div className='grid grid-cols-1 gap-6 md:gap-10 mt-6 md:mt-10 md:max-w-[50%] md:mx-auto lg:max-w-[33.333%]'>
-								{[{ name: 'Lawal Simibat Olamide', title: 'Content Support' }]?.map(
+								{[{ name: 'Lawal Simbiat Olamide', title: 'Content Support' }]?.map(
 									(item, index) => (
 										<div
 											key={`__item__${index + 12}`}
@@ -180,14 +180,14 @@ const Team = () => {
 												<p
 													className={cn(
 														inter?.className,
-														'text-[0.75rem] md:text-[1rem] font-normal leading-5 md:leading-8 text-black'
+														'text-[0.75rem] md:text-[1rem] font-normal leading-5 md:leading-8 text-black',
 													)}
 												>
 													{item?.title}
 												</p>
 											</div>
 										</div>
-									)
+									),
 								)}
 							</div>
 						</div>

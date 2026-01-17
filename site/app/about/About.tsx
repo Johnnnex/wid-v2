@@ -37,7 +37,7 @@ const About = () => {
 								>
 									{item}
 								</Button>
-							)
+							),
 						)}
 					</div>
 				</div>
@@ -146,7 +146,7 @@ const About = () => {
 							width: '1.5rem',
 							height: '1.5rem',
 						}}
-						url='https://drive.google.com/drive/folders/1oglXz-N4YJRUwSpGSwvTF2HfZ80SaV0i'
+						url='https://drive.google.com/drive/folders/120BcAwmfE7V3zL8b0ldZ7Dx5o-d-FSdh'
 						className='p-[.75rem_1.5rem] md:p-[1.25rem_2.5rem] mx-auto w-fit'
 						variant='outlined'
 					>

@@ -6,6 +6,18 @@ import { SVGClient } from '../common';
 
 const PartnerLogoStrip = () => {
 	const [reducedMotion, setReducedMotion] = useState(false);
+	const [isMobile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		const checkMobile = () => {
+			setIsMobile(window.innerWidth < 768);
+		};
+
+		checkMobile();
+		window.addEventListener('resize', checkMobile);
+
+		return () => window.removeEventListener('resize', checkMobile);
+	}, []);
 
 	useEffect(() => {
 		const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -22,6 +34,7 @@ const PartnerLogoStrip = () => {
 	}, []);
 
 	const partners = [
+		// SPONSORS/MARKETING
 		'toyow',
 		'nest',
 		'mansa',
@@ -33,6 +46,8 @@ const PartnerLogoStrip = () => {
 		'roqqu',
 		'miraweb',
 		'swift-fiat',
+
+		// TRAINING PARTNERS
 		'web3bridge',
 		'felbeth',
 		'base-west-africa',
@@ -40,6 +55,8 @@ const PartnerLogoStrip = () => {
 		'propel',
 		'starknet-africa',
 		'cartesi',
+
+		// COMMUNITY PARTNERS
 		'web3ladies',
 		'she-code-africa',
 		'moonshot',
@@ -56,11 +73,33 @@ const PartnerLogoStrip = () => {
 		'trust-wallet',
 		'aya',
 		'lagos-blockchain-week',
+
+		// EVENT PARTNERS
 		'careerbuddy',
 		'blockfest-africa',
 		'nftng',
+
+		// HACKATHONS
 		'dfs-labs',
 	];
+
+	const handleBeforeInjection = isMobile
+		? (svg: SVGSVGElement) => {
+				const width = svg.getAttribute('width');
+				const height = svg.getAttribute('height');
+				if (width) svg.setAttribute('width', `${parseFloat(width) * 0.5}`);
+				if (height) svg.setAttribute('height', `${parseFloat(height) * 0.5}`);
+			}
+		: undefined;
+
+	const renderPartners = (keyPrefix: string) =>
+		partners.map((logoUrl, index) => (
+			<SVGClient
+				key={`${keyPrefix}${index}`}
+				beforeInjection={handleBeforeInjection}
+				src={`/svg/${logoUrl}.svg`}
+			/>
+		));
 
 	return (
 		<section className='bg-[url(/images/texture-bg-full.png)] bg-blend-overlay bg-center bg-cover bg-[#0A74EF] py-10 md:py-20 px-0 md:px-10'>
@@ -73,19 +112,9 @@ const PartnerLogoStrip = () => {
 				className='marquee-container overflow-hidden mx-auto'
 			>
 				<div className='marquee-inner flex items-center gap-10 w-max'>
-					{partners.map((logoUrl, index) => (
-						<SVGClient
-							key={`__item__${index}`}
-							src={`/svg/${logoUrl}.svg`}
-						/>
-					))}
+					{renderPartners('__item__')}
 					{/* Duplicate for seamless loop */}
-					{partners.map((logoUrl, index) => (
-						<SVGClient
-							key={`__item__duplicate__${index}`}
-							src={`/svg/${logoUrl}.svg`}
-						/>
-					))}
+					{renderPartners('__item__duplicate__')}
 				</div>
 			</div>
 		</section>

@@ -21,12 +21,12 @@ const ProgramsGrid = () => {
 									'w-full md:w-85.5 transition-all py-3 md:py-3.75 font-normal text-[0.875rem] md:text-[1rem] duration-[.4s] rounded-[1.25rem] md:rounded-[2.5rem]',
 									index === activeTab
 										? 'bg-[#0A74EF] text-white'
-										: 'bg-transparent border text-[#000000B2] border-[#0A74EF33] hover:bg-[#0A74EF08]'
+										: 'bg-transparent border text-[#000000B2] border-[#0A74EF33] hover:bg-[#0A74EF08]',
 								)}
 							>
 								{buttonText}
 							</button>
-						)
+						),
 					)}
 				</div>
 
@@ -34,7 +34,7 @@ const ProgramsGrid = () => {
 				<div
 					className={cn(
 						'grid grid-cols-1 md:grid-cols-2 mt-8 md:mt-20 gap-6 md:gap-10 lg:gap-[2.5rem_3.75rem] transition-opacity duration-300',
-						activeTab === 0 ? 'opacity-100' : 'opacity-0 hidden'
+						activeTab === 0 ? 'opacity-100' : 'opacity-0 hidden',
 					)}
 				>
 					{[
@@ -46,7 +46,7 @@ const ProgramsGrid = () => {
 						{
 							title: 'Web Development Training',
 							content: `This is a foundational front-end development training; it is a prerequisite to our Blockchain development course. Whether you're a newbie or seeking to enhance your HTML, CSS & JavaScript skills, this training is for you.`,
-							url: '',
+							url: 'https://docs.google.com/forms/d/e/1FAIpQLScoQiZYYAu_o5G-Nq1KLXlRt6LW9mq_JlHOeMwwx2nvycTp2g/',
 						},
 					]?.map((item, index) => (
 						<div
@@ -81,7 +81,7 @@ const ProgramsGrid = () => {
 				<div
 					className={cn(
 						'rounded-xl md:rounded-[1.25rem] mt-8 md:mt-20 max-w-full md:max-w-286.5 mx-auto overflow-hidden flex flex-col bg-[#FFFFFF] aspect-auto lg:aspect-[1.787] transition-opacity duration-300',
-						activeTab === 1 ? 'opacity-100' : 'opacity-0 hidden'
+						activeTab === 1 ? 'opacity-100' : 'opacity-0 hidden',
 					)}
 				>
 					<figure
@@ -104,7 +104,10 @@ const ProgramsGrid = () => {
 							Project Management, Community Management, Technical Writing and Advanced
 							DeFi Research Methodologies.
 						</p>
-						<Button className='p-[.75rem_1.5rem] md:p-[1.25rem_2.5rem] w-fit'>
+						<Button
+							url='https://docs.google.com/forms/d/1xrdaZq32Qz_WUlxAfWRaJMddpqo-z-I4-Y21-spYwi8/'
+							className='p-[.75rem_1.5rem] md:p-[1.25rem_2.5rem] w-fit'
+						>
 							Apply Here
 						</Button>
 					</div>

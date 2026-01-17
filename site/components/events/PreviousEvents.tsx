@@ -47,7 +47,7 @@ const PreviousEvents = () => {
 								'px-4 md:px-8 transition-all py-3 md:py-3.75 font-normal text-[0.875rem] md:text-[1rem] duration-[.4s] rounded-[1.25rem] md:rounded-[2.5rem]',
 								index === activeTab
 									? 'bg-[#0A74EF] text-white'
-									: 'bg-transparent border text-[#000000B2] border-[#0A74EF33] hover:bg-[#0A74EF08]'
+									: 'bg-transparent border text-[#000000B2] border-[#0A74EF33] hover:bg-[#0A74EF08]',
 							)}
 						>
 							{event.name}
@@ -60,7 +60,7 @@ const PreviousEvents = () => {
 						key={`__tab__${tabIndex}`}
 						className={cn(
 							'mt-6 md:mt-10 transition-opacity flex flex-col lg:flex-row gap-4 md:gap-10 duration-300',
-							activeTab === tabIndex ? 'opacity-100' : 'opacity-0 hidden'
+							activeTab === tabIndex ? 'opacity-100' : 'opacity-0 hidden',
 						)}
 					>
 						{event.images.map((image, imgIndex) => (
@@ -81,7 +81,7 @@ const PreviousEvents = () => {
 				<div className='flex justify-center mt-6 md:mt-10 w-full'>
 					<Button
 						variant='outlined'
-						url='https://drive.google.com/drive/folders/1oglXz-N4YJRUwSpGSwvTF2HfZ80SaV0i'
+						url='https://drive.google.com/drive/folders/120BcAwmfE7V3zL8b0ldZ7Dx5o-d-FSdh'
 						className='w-fit p-[.75rem_1.5rem] md:p-[1.25rem_2.5rem]'
 						icon={{
 							url: 'hugeicons:arrow-right-01',
