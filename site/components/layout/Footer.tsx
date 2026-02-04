@@ -93,7 +93,7 @@ const Footer = () => {
 								links: [
 									{ label: 'Partner with us', url: '/partner' },
 									{ label: 'Make a donation', url: '/donate' },
-									{ label: 'WID Summit', url: '/' },
+									{ label: 'WID Summit', url: 'https://summit.womenindefi.org' },
 									{
 										label: 'Annual Reports',
 										hasDropdown: true,
