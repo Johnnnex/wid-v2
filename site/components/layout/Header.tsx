@@ -1,8 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { SVGClient } from '../common/SVGClient';
-import { Button } from '../common/Button';
+import { Button, SVGClient } from '../common';
 import Link from 'next/link';
 import { Icon } from '@iconify/react';
 import { cn } from '@/lib/utils';
@@ -38,13 +37,13 @@ const Header = () => {
 			style={{ boxShadow: '0 2px 6px 0 rgba(10, 116, 239, 0.12)' }}
 			className={cn(
 				'bg-[#FFFFFF] lg:rounded-none fixed top-0 w-full px-6 lg:px-20 z-50 transition-all duration-300',
-				isMobileMenuOpen ? 'rounded-b-[1.25rem]' : ''
+				isMobileMenuOpen ? 'rounded-b-[1.25rem]' : '',
 			)}
 		>
 			<div
 				className={cn(
 					'flex justify-between max-w-350 mx-auto items-center transition-all duration-300',
-					isScrolled ? 'lg:py-4 py-3' : 'py-6 lg:py-12'
+					isScrolled ? 'lg:py-4 py-3' : 'py-6 lg:py-12',
 				)}
 			>
 				<SVGClient
@@ -93,7 +92,7 @@ const Header = () => {
 										<button
 											className={cn(
 												'hover:text-[#0A74EF] transition-colors duration-300 text-[1rem] flex items-center gap-1 cursor-pointer',
-												isActive(undefined, dropdown) ? 'text-[#0A74EF]' : 'text-[#000000]'
+												isActive(undefined, dropdown) ? 'text-[#0A74EF]' : 'text-[#000000]',
 											)}
 											type='button'
 										>
@@ -109,7 +108,7 @@ const Header = () => {
 										<Link
 											className={cn(
 												'hover:text-[#0A74EF] transition-colors duration-300 text-[1rem] flex items-center gap-1',
-												isActive(url) ? 'text-[#0A74EF]' : 'text-[#000000]'
+												isActive(url) ? 'text-[#0A74EF]' : 'text-[#000000]',
 											)}
 											href={url}
 										>
@@ -120,7 +119,9 @@ const Header = () => {
 										<div
 											className={cn(
 												'absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white shadow-lg rounded-lg w-33.25 overflow-hidden transition-all duration-300 ease-in-out',
-												openDropdown === name ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+												openDropdown === name
+													? 'max-h-96 opacity-100'
+													: 'max-h-0 opacity-0',
 											)}
 										>
 											<div className='py-5 px-3'>
@@ -132,7 +133,7 @@ const Header = () => {
 															`block text-[1rem] border-[#0A74EF33] text-center hover:text-[#0A74EF] transition-colors duration-300`,
 															pathname === item.url ? 'text-[#0A74EF]' : 'text-black',
 															idx === 0 ? 'pb-5' : idx === 2 ? 'pt-5' : 'py-5',
-															idx !== 2 && 'border-b'
+															idx !== 2 && 'border-b',
 														)}
 													>
 														{item.name}
@@ -159,19 +160,19 @@ const Header = () => {
 					<span
 						className={cn(
 							'w-6 h-0.75 bg-[#0A74EF] rounded-[1.25rem] transition-all duration-300',
-							isMobileMenuOpen && 'rotate-45 translate-y-1.75'
+							isMobileMenuOpen && 'rotate-45 translate-y-1.75',
 						)}
 					/>
 					<span
 						className={cn(
 							'w-6 h-0.75 bg-[#0A74EF] rounded-[1.25rem] transition-all duration-300',
-							isMobileMenuOpen && 'opacity-0'
+							isMobileMenuOpen && 'opacity-0',
 						)}
 					/>
 					<span
 						className={cn(
 							'w-6 h-0.75 bg-[#0A74EF] rounded-[1.25rem] transition-all duration-300',
-							isMobileMenuOpen && '-rotate-45 -translate-y-1.75'
+							isMobileMenuOpen && '-rotate-45 -translate-y-1.75',
 						)}
 					/>
 				</button>
@@ -183,7 +184,7 @@ const Header = () => {
 					'lg:hidden bg-white overflow-hidden transition-all duration-300 ease-in-out',
 					isMobileMenuOpen
 						? 'max-h-[calc(100vh-5rem)] opacity-100'
-						: 'max-h-0 opacity-0'
+						: 'max-h-0 opacity-0',
 				)}
 			>
 				<ul className='md:px-6 pb-10'>
@@ -218,7 +219,7 @@ const Header = () => {
 									<button
 										className={cn(
 											'w-full text-left py-5 flex items-center justify-between transition-colors duration-300',
-											isActive(undefined, dropdown) ? 'text-[#0A74EF]' : 'text-[#000000]'
+											isActive(undefined, dropdown) ? 'text-[#0A74EF]' : 'text-[#000000]',
 										)}
 										onClick={() => setOpenDropdown(openDropdown === name ? null : name)}
 										type='button'
@@ -234,7 +235,7 @@ const Header = () => {
 									<div
 										className={cn(
 											'overflow-hidden transition-all duration-300',
-											openDropdown === name ? 'max-h-96' : 'max-h-0'
+											openDropdown === name ? 'max-h-96' : 'max-h-0',
 										)}
 									>
 										{dropdown.map((item, idx) => (
@@ -245,7 +246,7 @@ const Header = () => {
 													'block py-3 pl-4 text-[0.9375rem] transition-colors duration-300',
 													pathname === item.url
 														? 'text-[#0A74EF]'
-														: 'text-black hover:text-[#0A74EF]'
+														: 'text-black hover:text-[#0A74EF]',
 												)}
 												onClick={() => setIsMobileMenuOpen(false)}
 											>
@@ -260,7 +261,7 @@ const Header = () => {
 										'block py-5 text-[1rem] transition-colors duration-300',
 										isActive(url)
 											? 'text-[#0A74EF]'
-											: 'text-[#000000] hover:text-[#0A74EF]'
+											: 'text-[#000000] hover:text-[#0A74EF]',
 									)}
 									href={url}
 									onClick={() => setIsMobileMenuOpen(false)}

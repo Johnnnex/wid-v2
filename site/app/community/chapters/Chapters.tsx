@@ -15,7 +15,7 @@ const Chapters = () => {
 						<p
 							className={cn(
 								inter?.className,
-								'text-center w-full md:w-193.25 mx-auto leading-5 md:leading-8 mb-6 md:mb-8.25 font-normal text-[0.75rem] md:text-[1rem]'
+								'text-center w-full md:w-193.25 mx-auto leading-5 md:leading-8 mb-6 md:mb-8.25 font-normal text-[0.75rem] md:text-[1rem]',
 							)}
 						>
 							Join our community and engage with over 8000+ fellow African women in the
@@ -39,7 +39,7 @@ const Chapters = () => {
 												isOddRow ? 'col-span-4' : 'col-span-3',
 												isOddColumn
 													? 'md:col-span-1 md:row-span-4'
-													: 'md:col-span-1 md:row-span-3'
+													: 'md:col-span-1 md:row-span-3',
 											)}
 										>
 											<img
@@ -54,7 +54,7 @@ const Chapters = () => {
 												!isOddRow ? 'col-span-4' : 'col-span-3',
 												!isOddColumn
 													? 'md:col-span-1 md:row-span-4'
-													: 'md:col-span-1 md:row-span-3'
+													: 'md:col-span-1 md:row-span-3',
 											)}
 										>
 											<img
@@ -89,7 +89,7 @@ const Chapters = () => {
 					<p
 						className={cn(
 							inter?.className,
-							'text-black text-[0.75rem] md:text-[1rem] leading-5 md:leading-8 font-normal text-center mb-6 md:mb-10'
+							'text-black text-[0.75rem] md:text-[1rem] leading-5 md:leading-8 font-normal text-center mb-6 md:mb-10',
 						)}
 					>
 						Ready to become a Blockchain Baddie? Join a WID chapter in your region
@@ -100,8 +100,14 @@ const Chapters = () => {
 							{ title: 'WID Akwa-Ibom State', url: 'https://linktr.ee/widakwaibom' },
 							{ title: 'WID Anambra State', url: 'https://linktr.ee/WIDAnambra' },
 							{ title: 'WID Bayelsa State', url: 'https://linktr.ee/widbayelsa' },
-							{ title: 'WID Cross Rivers State', url: '' },
-							{ title: 'WID Delta State', url: '' },
+							{
+								title: 'WID Cross Rivers State',
+								url: 'https://chat.whatsapp.com/EGWi8Zrg2J6IifDiUU6Sgw',
+							},
+							{
+								title: 'WID Delta State',
+								url: 'https://chat.whatsapp.com/HRPvxR2DubVDB3sRDKCB8G',
+							},
 							{ title: 'WID Edo State', url: 'https://linktr.ee/WID_EDO' },
 							{ title: 'WID Enugu State', url: 'https://linktr.ee/WID_Enugu' },
 							{ title: 'WID Kano State', url: 'https://linktr.ee/widkano' },

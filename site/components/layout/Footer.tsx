@@ -35,7 +35,7 @@ const Footer = () => {
 						url: string;
 					}[];
 					url?: undefined;
-			  }
+			  },
 	) => {
 		if (!link.url) {
 			return (
@@ -101,6 +101,10 @@ const Footer = () => {
 											{
 												label: '2024 Report',
 												url: 'https://drive.google.com/file/d/1SAbv76eM6S4StD1dm5hqQVWlJgLjw5rf/view?usp=sharing',
+											},
+											{
+												label: '2025 Report',
+												url: 'https://drive.google.com/file/d/1N8eAXu67eGdOiQwOTb8lRblBXBLqCoeY/view?usp=drivesdk',
 											},
 										],
 									},

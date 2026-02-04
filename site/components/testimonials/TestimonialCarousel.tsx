@@ -10,6 +10,11 @@ import { cn } from '@/lib/utils';
 
 const testimonialData = [
 	{
+		quote: `WID gave me a community and platform. It gave me a renewed mindset that growth can be attained and sustainable and wealth at a young age is achievable`,
+		name: 'HederaWrites',
+		imgName: 'ivy.jpg',
+	},
+	{
 		quote: `I won a MiFi and got accepted into the 3.0 Technical Writing Cohort. The MiFi helped me stay consistent, and the cohort is helping me grow my Web3 knowledge and writing skills.`,
 		name: 'Kuti Peace Metalayo',
 		imgName: 'kuti-peace-metalayo.jpg',
@@ -59,7 +64,7 @@ const testimonialData = [
 const TestimonialCarousel = () => {
 	const [emblaRef, emblaApi] = useEmblaCarousel(
 		{ loop: true, dragFree: false, align: 'center' },
-		[Autoplay({ delay: 5000, stopOnInteraction: false })]
+		[Autoplay({ delay: 5000, stopOnInteraction: false })],
 	);
 
 	const scrollPrev = useCallback(() => {
@@ -91,7 +96,7 @@ const TestimonialCarousel = () => {
 									<img
 										className={cn(
 											'w-full h-[60%] md:h-full md:w-100 object-cover object-center',
-											index === 2 ? 'object-top md:object-center' : ''
+											index === 2 ? 'object-top md:object-center' : '',
 										)}
 										alt={testimonial.name}
 										src={`/images/${testimonial.imgName}`}
