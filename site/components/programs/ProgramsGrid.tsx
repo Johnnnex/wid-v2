@@ -46,7 +46,7 @@ const ProgramsGrid = () => {
 						{
 							title: 'Web Development Training',
 							content: `This is a foundational front-end development training; it is a prerequisite to our Blockchain development course. Whether you're a newbie or seeking to enhance your HTML, CSS & JavaScript skills, this training is for you.`,
-							url: 'https://docs.google.com/forms/d/e/1FAIpQLScoQiZYYAu_o5G-Nq1KLXlRt6LW9mq_JlHOeMwwx2nvycTp2g/',
+							url: 'https://docs.google.com/forms/d/e/1FAIpQLScoQiZYYAu_o5G-Nq1KLXlRt6LW9mq_JlHOeMwwx2nvycTp2g/viewform',
 						},
 					]?.map((item, index) => (
 						<div
