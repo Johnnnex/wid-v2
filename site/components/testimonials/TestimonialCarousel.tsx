@@ -12,7 +12,7 @@ const testimonialData = [
 	{
 		quote: `WID gave me a community and platform. It gave me a renewed mindset that growth can be attained and sustainable and wealth at a young age is achievable`,
 		name: 'HederaWrites',
-		imgName: 'ivy.jpg',
+		imgName: 'ivy.png',
 	},
 	{
 		quote: `I won a MiFi and got accepted into the 3.0 Technical Writing Cohort. The MiFi helped me stay consistent, and the cohort is helping me grow my Web3 knowledge and writing skills.`,
