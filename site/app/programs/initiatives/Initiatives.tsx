@@ -1,5 +1,5 @@
 import { inter } from '@/app/layout';
-import { CTA, HeroV2 } from '@/components/common';
+import { Button, CTA, HeroV2 } from '@/components/common';
 import { SuccessStories } from '@/components/programs';
 
 const Initiatives = () => {
@@ -32,6 +32,10 @@ const Initiatives = () => {
 							{
 								title: 'Laptop Scholarship',
 								content: `An initiative that recognizes and supports credible young women with laptops, helping them stay empowered and supported on their journey towards greatness.`,
+								button: {
+									name: 'Apply Here',
+									url: 'https://docs.google.com/forms/d/e/1FAIpQLSdi3ixCRZSAzyfTZ8gkfWMcfFeJ7e0ECCOH6v3lndUx7TjgFA/viewform?usp=header',
+								},
 							},
 						]?.map((item, index) => (
 							<div
@@ -53,6 +57,14 @@ const Initiatives = () => {
 									>
 										{item?.content}
 									</p>
+									{!!item?.button && (
+										<Button
+											className='w-fit'
+											url={item?.button?.url as string}
+										>
+											{item?.button?.name}
+										</Button>
+									)}
 								</div>
 							</div>
 						))}
