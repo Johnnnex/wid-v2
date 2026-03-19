@@ -34,7 +34,7 @@ const Initiatives = () => {
 								content: `An initiative that recognizes and supports credible young women with laptops, helping them stay empowered and supported on their journey towards greatness.`,
 								button: {
 									name: 'Apply Here',
-									url: 'https://docs.google.com/forms/d/e/1FAIpQLSdi3ixCRZSAzyfTZ8gkfWMcfFeJ7e0ECCOH6v3lndUx7TjgFA/viewform?usp=header',
+									url: 'https://giftdice.com/giveaway/d9kwmo6S5o',
 								},
 							},
 						]?.map((item, index) => (
